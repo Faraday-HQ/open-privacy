@@ -1,0 +1,32 @@
+{
+  "name": "faraday-privacy-commons",
+  "version": "1.0.0",
+  "description": "Open privacy, online safety and data governance resources for Aotearoa New Zealand. Source for faraday.co.nz.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "test": "node --test tests/*.test.js",
+    "lint:prose": "node scripts/lint-prose.js src docs README.md GOVERNANCE.md CONTRIBUTING.md",
+    "check:sources": "node scripts/check-sources.js",
+    "check:links": "node scripts/check-internal-links.js",
+    "check": "npm run test && npm run lint:prose && npm run check:sources && npm run build && npm run check:links && npm run check:seo",
+    "check:seo": "node scripts/check-seo.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "@fontsource-variable/geist": "^5.3.0",
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@fontsource/geist": "^5.3.0",
+    "@fontsource/geist-mono": "^5.3.0",
+    "@fontsource/syne": "^5.3.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "markdown-it-attrs": "^5.0.1",
+    "satori": "^0.62.0"
+  }
+}

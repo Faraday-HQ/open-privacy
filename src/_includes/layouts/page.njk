@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+{%- set headFacts -%}{% include "partials/source-fact.njk" %}{%- endset -%}
+{%- set mainHtml -%}
+<div class="prose">{{ content | safe }}</div>
+{% include "partials/sources.njk" %}
+{%- endset -%}
+<article>
+  {% include "partials/page-head.njk" %}
+  {% include "partials/doc-body.njk" %}
+</article>

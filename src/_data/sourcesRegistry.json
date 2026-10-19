@@ -1,0 +1,890 @@
+[
+  {
+    "id": "pa-2020",
+    "title": "Privacy Act 2020",
+    "publisher": "New Zealand Legislation",
+    "url": "https://www.legislation.govt.nz/act/public/2020/0031/latest/LMS23223.html",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "Primary source. NZLII section links below are easier to cite by section."
+  },
+  {
+    "id": "pa-s7",
+    "title": "Privacy Act 2020, s 7 (interpretation, including 'working day')",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s7.html",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "pa-s11",
+    "title": "Privacy Act 2020, s 11 (information held by an agency on behalf of another)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s11.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s22",
+    "title": "Privacy Act 2020, s 22 (the information privacy principles)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s22.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s44",
+    "title": "Privacy Act 2020, s 44 (responding to an IPP 6 request within 20 working days)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s44.html",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "pa-s112",
+    "title": "Privacy Act 2020, s 112 (meaning of privacy breach and notifiable privacy breach)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s112.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s113",
+    "title": "Privacy Act 2020, s 113 (assessing likely harm)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s113.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s114",
+    "title": "Privacy Act 2020, s 114 (notifying the Commissioner)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s114.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s115",
+    "title": "Privacy Act 2020, s 115 (notifying affected individuals or giving public notice)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s115.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s116",
+    "title": "Privacy Act 2020, s 116 (exceptions to notifying affected individuals)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s116.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s118",
+    "title": "Privacy Act 2020, s 118 (offence of failing to notify the Commissioner)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s118.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "pa-s201",
+    "title": "Privacy Act 2020, s 201 (privacy officers)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/pa2020108/s201.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "moj-amendment",
+    "title": "Enhancing the Privacy Act (Privacy Amendment Act 2025)",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.justice.govt.nz/justice-sector-policy/key-initiatives/enhancing-the-privacy-act",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-ipp3a",
+    "title": "IPP3A: notification requirements for indirect collection of personal information",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/ipp3a/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-ipp3a-flowchart",
+    "title": "IPP3A decision flowchart (PDF)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/assets/DOCUMENTS/251104-IPP3A-decision-flowchart.pdf",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-poupou",
+    "title": "Poupou Matatapu: doing privacy well",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/poupou-matatapu-doing-privacy-well/",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "OPC says it will use this guidance when deciding on compliance action, and invites people to build their own checklists and templates from it."
+  },
+  {
+    "id": "opc-breaches",
+    "title": "Sorting out privacy breaches (including NotifyUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/privacy-breaches/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-breach-pou",
+    "title": "Breach management (Poupou Matatapu)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/poupou-matatapu-doing-privacy-well/breach-management/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-bppc",
+    "title": "Biometric Processing Privacy Code 2025",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/privacy-act-2020/codes-of-practice/biometric-processing-privacy-code/",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "In force 3 November 2025; transition for existing processing ended 3 August 2026; Amendment No 1 (IPP3A) made 25 March 2026."
+  },
+  {
+    "id": "opc-biometrics",
+    "title": "Guidance on complying with the Biometrics Code",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/biometrics/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-genai",
+    "title": "Generative artificial intelligence: OPC expectations",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/ai/generative-artificial-intelligence/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-third-party",
+    "title": "Working with third-party providers",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/working-with-third-party-providers/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-cctv",
+    "title": "CCTV guidance",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/privacy-and-cctv/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-cctv-access",
+    "title": "Responding to access requests for CCTV footage",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/responding-to-access-requests-for-cctv-footage/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-pia",
+    "title": "Privacy Impact Assessments",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/privacy-impact-assessments/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-statement-generator",
+    "title": "Privacy Statement Generator",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/privacy-statement-generator/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-aboutme",
+    "title": "AboutMe (Request My Info tool)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/your-rights/aboutme-request-my-info-tool/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-ask",
+    "title": "Ask for your information",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/your-rights/ask-for-your-information/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-correct",
+    "title": "Correct your information",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/your-rights/correct-your-information/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-complain",
+    "title": "Complain to the Privacy Commissioner",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/your-rights/making-a-complaint-to-the-privacy-commissioner/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-hrrt",
+    "title": "The Human Rights Review Tribunal",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/your-rights/the-human-rights-review-tribunal/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-overseas",
+    "title": "Sending information overseas (IPP 12)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/disclosing-personal-information-outside-new-zealand/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-elearning",
+    "title": "Free privacy e-learning",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/online-privacy-training-free/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-privacy-officers",
+    "title": "Information for privacy officers",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/privacy-officers/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-codes",
+    "title": "Codes of practice",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/privacy-principles/codes-of-practice/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-crpc",
+    "title": "Credit Reporting Privacy Code",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/privacy-principles/codes-of-practice/crpc2020/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-children",
+    "title": "Children and young people's privacy",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/protecting-children-and-young-peoples-privacy/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-clubs",
+    "title": "Clubs and societies",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/clubs-and-societies/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-reports",
+    "title": "Corporate reports (annual reports)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/about-us/corporate-reports/",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "2024/25 annual report: breach notifications rose from 864 to 1,093."
+  },
+  {
+    "id": "opc-mmh",
+    "title": "Manage My Health inquiry",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/focus-areas/manage-my-health-inquiry/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-mmh-summary",
+    "title": "Executive summary: Manage My Health inquiry, phase one",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/focus-areas/manage-my-health-inquiry/executive-summary-manage-my-health-phase-one/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-electoral",
+    "title": "Confidentiality and the unpublished electoral roll",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://privacy.org.nz/blog/electoral-roll",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "hdca",
+    "title": "Harmful Digital Communications Act 2015",
+    "publisher": "New Zealand Legislation",
+    "url": "https://www.legislation.govt.nz/act/public/2015/0063/latest/whole.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "police-hdc",
+    "title": "Harmful digital communications",
+    "publisher": "New Zealand Police",
+    "url": "https://www.police.govt.nz/advice-services/cybercrime-and-internet/harmful-digital-communications-hdc",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "communitylaw-hdca",
+    "title": "Cyberbullying: protections against online harassment",
+    "publisher": "Community Law",
+    "url": "https://communitylaw.org.nz/community-law-manual/chapter-28-harassment-and-bullying/cyberbullying-protections-against-online-digital-harassment/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "moj-hdc-order",
+    "title": "Applying for a harmful digital communications order",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.justice.govt.nz/courts/civil/harmful-digital-communications/applying-for-a-harmful-digital-communications-order",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "harassment-act",
+    "title": "Harassment Act 1997",
+    "publisher": "New Zealand Legislation",
+    "url": "https://www.legislation.govt.nz/act/public/1997/0092/latest/whole.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "netsafe-report",
+    "title": "Report online harm",
+    "publisher": "Netsafe",
+    "url": "https://netsafe.org.nz/report",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "netsafe-service",
+    "title": "Service update: harmful digital communications complaints",
+    "publisher": "Netsafe",
+    "url": "https://netsafe.org.nz/our-work/helpline-services/service-disruption",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "Netsafe reported record HDCA complaint volumes in mid-2026."
+  },
+  {
+    "id": "cab-netsafe",
+    "title": "Netsafe (community directory entry)",
+    "publisher": "Citizens Advice Bureau",
+    "url": "https://www.cab.org.nz/community-directory/KB00008499",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "Lists Netsafe as the HDCA Approved Agency, last checked by CAB 11 October 2026."
+  },
+  {
+    "id": "ncsc-reporting",
+    "title": "Reporting cyber incidents after the CERT NZ and NCSC integration",
+    "publisher": "National Cyber Security Centre",
+    "url": "https://www.ncsc.govt.nz/news/reporting-cyber-incidents-now-easier-with-the-completed-integration-of-cert-nz-and-the-ncsc/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "ncsc-q2-2026",
+    "title": "Cyber Security Insights, Q2 2026",
+    "publisher": "National Cyber Security Centre",
+    "url": "https://www.ncsc.govt.nz/news/new-zealanders-urged-to-take-care-as-cyber-security-incidents-become-more-complex/",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "1,129 incident reports and $2.7 million in reported direct losses, April to June 2026."
+  },
+  {
+    "id": "ownyouronline",
+    "title": "Own Your Online",
+    "publisher": "National Cyber Security Centre",
+    "url": "https://www.ownyouronline.govt.nz/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "howexposed",
+    "title": "How Exposed Am I",
+    "publisher": "National Cyber Security Centre",
+    "url": "https://www.howexposedami.co.nz/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "dia-7726",
+    "title": "Report scam texts by forwarding them to 7726",
+    "publisher": "Department of Internal Affairs",
+    "url": "https://www.dia.govt.nz/press.nsf/d77da9b523f12931cc256ac5000d19b6/088d8dad4b5c766ccc2589c6000dd0e1!OpenDocument",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "anti-scam-2026",
+    "title": "New Zealand Anti-Scam Alliance work programme 2026",
+    "publisher": "MBIE",
+    "url": "https://www.mbie.govt.nz/dmsdocument/31971-new-zealand-anti-scam-alliance-work-programme-2026",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "nzba",
+    "title": "Code of Banking Practice (scam protection commitments from 30 November 2025)",
+    "publisher": "New Zealand Banking Association",
+    "url": "https://www.nzba.org.nz/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "idcare-suppression",
+    "title": "Credit file suppressions in New Zealand",
+    "publisher": "IDCARE",
+    "url": "https://idcare.org/fact-sheets/suppressions-new-zealand",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "centrix-suppression",
+    "title": "My credit report suppression (November 2025)",
+    "publisher": "Centrix",
+    "url": "https://www.centrix.co.nz/wp-content/uploads/2025/11/Centrix_My-Credit-Report-Suppression_November-2025-.pdf",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "vote-unpublished",
+    "title": "Can you go on the unpublished roll?",
+    "publisher": "Electoral Commission",
+    "url": "https://vote.nz/enrolling/get-ready-to-enrol/can-you-go-on-the-unpublished-roll",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "vote-dates",
+    "title": "Key dates for the 2026 General Election",
+    "publisher": "Electoral Commission",
+    "url": "https://vote.nz/2026-general-election/about/key-dates",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "rating-28c",
+    "title": "Local Government (Rating) Amendment Act 2004 (inserts s 28C, withholding owner details)",
+    "publisher": "New Zealand Legislation",
+    "url": "https://www.legislation.govt.nz/act/public/2004/66/en/latest",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "dcc-rid-form",
+    "title": "Withholding names and postal addresses from the rating information database (example form)",
+    "publisher": "Dunedin City Council",
+    "url": "https://www.dunedin.govt.nz/__data/assets/pdf_file/0012/1310160/withholding-names-and-postal-addresses-form.pdf",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "companies-address",
+    "title": "New law related to directors' residential addresses",
+    "publisher": "Companies Office",
+    "url": "https://companies-register.companiesoffice.govt.nz/news-and-notices/new-law-related-to-directors-residential-addresses/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "iod-address",
+    "title": "New address protections for directors",
+    "publisher": "Institute of Directors",
+    "url": "https://www.iod.org.nz/news/articles/new-address-protections-for-directors",
+    "checked": "2026-10-19",
+    "status": "verified",
+    "note": "Confirms commencement on 18 November 2026."
+  },
+  {
+    "id": "mbie-address-regs",
+    "title": "Companies Act 1993 (Address Information) Amendment Regulations 2026: Cabinet minute",
+    "publisher": "MBIE",
+    "url": "https://www.mbie.govt.nz/dmsdocument/32655-companies-act-1993-address-information-amendment-regulations-2026-minute-of-decision-proactiverelease-pdf",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "ppsr-search",
+    "title": "Searching for a debtor person",
+    "publisher": "Personal Property Securities Register",
+    "url": "https://ppsr.companiesoffice.govt.nz/help-centre/searching-the-ppsr/debtor-person-search",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "cdr",
+    "title": "Consumer Data Right policy design",
+    "publisher": "MBIE",
+    "url": "https://www.mbie.govt.nz/business-and-employment/business/consumer-data-right/consumer-data-right-policy-design",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "matariki-dates",
+    "title": "Matariki dates 2022 to 2052 (Matariki Advisory Committee)",
+    "publisher": "MBIE",
+    "url": "https://www.mbie.govt.nz/assets/matariki-dates-2022-to-2052-matariki-advisory-group.pdf",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "pmaf",
+    "title": "What the Privacy Maturity Assessment Framework is",
+    "publisher": "Digital.govt.nz",
+    "url": "https://www.digital.govt.nz/standards-and-guidance/privacy-security-and-risk/privacy/privacy-maturity-assessment-framework-pmaf-and-self-assessments/learn-about-pmaf-2/what-pmaf-is",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "te-mana-raraunga",
+    "title": "Te Mana Raraunga: Māori Data Sovereignty Network",
+    "publisher": "Te Mana Raraunga",
+    "url": "https://www.temanararaunga.maori.nz/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "te-kahui-raraunga",
+    "title": "Te Kāhui Raraunga (Māori Data Governance Model)",
+    "publisher": "Te Kāhui Raraunga",
+    "url": "https://www.kahuiraraunga.io/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "stopncii",
+    "title": "StopNCII.org",
+    "publisher": "StopNCII",
+    "url": "https://stopncii.org/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "takeitdown",
+    "title": "Take It Down (for images taken when under 18)",
+    "publisher": "NCMEC",
+    "url": "https://takeitdown.ncmec.org/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "womens-refuge",
+    "title": "Women's Refuge",
+    "publisher": "Women's Refuge",
+    "url": "https://womensrefuge.org.nz/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "shine",
+    "title": "Shine",
+    "publisher": "Shine",
+    "url": "https://2shine.org.nz/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "safetotalk",
+    "title": "Safe to talk",
+    "publisher": "Safe to talk",
+    "url": "https://safetotalk.nz/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "apple-personal-safety",
+    "title": "Personal Safety User Guide",
+    "publisher": "Apple",
+    "url": "https://support.apple.com/guide/personal-safety/welcome/web",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "police-105",
+    "title": "Report non-emergencies to Police (105)",
+    "publisher": "New Zealand Police",
+    "url": "https://www.police.govt.nz/use-105",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "opc-askus-camera",
+    "title": "Is my neighbour allowed to film our property with a security camera? (AskUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/knowledge-base/view/43/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-askus-employer",
+    "title": "What information is my employer entitled to collect while I'm working? (AskUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/knowledge-base/view/36/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-askus-record",
+    "title": "Can I record someone without telling them? (AskUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/knowledge-base/view/31/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-askus-posting",
+    "title": "What are the rules around posting photos or anything else about other people on social media? (AskUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/knowledge-base/view/126/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-askus-relatives",
+    "title": "Are agencies allowed to disclose information to my relatives or partner? (AskUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/knowledge-base/view/307/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-askus-correction",
+    "title": "What can I do if an agency has incorrect information about me? (AskUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/knowledge-base/view/56/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "opc-askus-timeframe",
+    "title": "How long does an agency have to respond to my request? (AskUs)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/knowledge-base/view/7/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "opc-rental-tenants",
+    "title": "Rental guidance for tenants",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/rental-guidance-for-tenants/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-rental-landlords",
+    "title": "Rental guidance for landlords",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/rental-guidance-for-landlords/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "opc-retail",
+    "title": "Guidance for the retail sector",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/a-z-topics/retail-sector/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-photocopy-id",
+    "title": "Photocopying proof of identity",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/blog/photocopying-proof-of-identity/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-casenote-bar",
+    "title": "Case note: bar scans and retains a copy of patron's driver's licence",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/resources-and-learning/case-notes-and-court-decisions/case-note-221786-2011-nz-priv-cmr-2-bar-scans-and-retains-a-copy-of-patron-s-driver-s-licence/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "opc-police",
+    "title": "Releasing information to Police and law enforcement agencies",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/responsibilities/releasing-personal-information-to-police-and-law-enforcement-agencies/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-charging",
+    "title": "Charging for access to personal information (flowchart, PDF)",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://privacy.org.nz/assets/New-order/Your-responsibilities/Charging-to-release-personal-information/2025-02-11-Charging-for-access-flowchart-print-updated.pdf",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "opc-hipc",
+    "title": "Health Information Privacy Code 2020",
+    "publisher": "Office of the Privacy Commissioner",
+    "url": "https://www.privacy.org.nz/privacy-principles/codes-of-practice/hipc2020/",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "communitylaw-health-records",
+    "title": "Your health records",
+    "publisher": "Community Law",
+    "url": "https://communitylaw.org.nz/?p=44451",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "moj-clean-slate",
+    "title": "Clean slate scheme",
+    "publisher": "Ministry of Justice",
+    "url": "https://www.justice.govt.nz/criminal-records/clean-slate/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "deepfake-bill",
+    "title": "Deepfake Digital Harm and Exploitation Bill (member's bill 213-1)",
+    "publisher": "New Zealand Legislation",
+    "url": "https://www.legislation.govt.nz/bill/member/2025/0213/latest/whole.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "onenews-deepfake-law",
+    "title": "NZ is criminalising sexualised deepfakes (20 May 2026)",
+    "publisher": "1News",
+    "url": "https://www.1news.co.nz/2026/05/20/nz-is-criminalising-sexualised-deepfakes-banning-the-apps-should-be-next/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "onenews-deepfake-sentence",
+    "title": "First NZ sentencing for creating, sharing deepfake porn images (22 May 2026)",
+    "publisher": "1News",
+    "url": "https://www.1news.co.nz/2026/05/22/man-sentenced-for-creating-sharing-deepfake-porn-images/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "aviation-part101",
+    "title": "Part 101 rules for drones",
+    "publisher": "Civil Aviation Authority",
+    "url": "https://www.aviation.govt.nz/drones/regulations/part-101-rules-for-drones/",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "dia-unsubscribe",
+    "title": "About unsubscribing (Unsolicited Electronic Messages Act)",
+    "publisher": "Department of Internal Affairs",
+    "url": "https://www.dia.govt.nz/Information-about-unsubscribing",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "uema",
+    "title": "Unsolicited Electronic Messages Act 2007",
+    "publisher": "New Zealand Legislation",
+    "url": "https://www.legislation.govt.nz/act/public/2007/0007/latest/whole.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "crimes-216b",
+    "title": "Crimes Act 1961, s 216B (prohibition on use of interception devices)",
+    "publisher": "NZLII",
+    "url": "https://www.nzlii.org/nz/legis/consol_act/ca1961107/s216b.html",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "netsafe-tax-scam",
+    "title": "Netsafe warns of tax refund scam surge (4 June 2026)",
+    "publisher": "Netsafe via Scoop",
+    "url": "https://www.scoop.co.nz/stories/AK2606/S00153/netsafe-warns-of-tax-refund-scam-surge.htm",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "odt-toll-scam",
+    "title": "Text scam hits more than 140,000 people (RNZ, June 2023)",
+    "publisher": "Otago Daily Times",
+    "url": "https://www.odt.co.nz/news/national/text-scam-hits-more-than-140-000-people-i9u442tw",
+    "checked": "2026-10-19",
+    "status": "verified"
+  },
+  {
+    "id": "nzpost-scams",
+    "title": "Scams and fraud",
+    "publisher": "NZ Post",
+    "url": "https://www.nzpost.co.nz/contact-support/scams-and-fraud",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "gdpr-text",
+    "title": "Regulation (EU) 2016/679 (GDPR), including Article 3 on territorial scope",
+    "publisher": "EUR-Lex",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "eu-adequacy",
+    "title": "Adequacy decisions (New Zealand is recognised)",
+    "publisher": "European Commission",
+    "url": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection/adequacy-decisions_en",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "google-remove",
+    "title": "Remove results about you from Google Search",
+    "publisher": "Google",
+    "url": "https://support.google.com/websearch/answer/12719076",
+    "checked": "2026-10-19",
+    "status": "to-verify"
+  },
+  {
+    "id": "opc-annual-statement",
+    "title": "Privacy complaints up in 2024/25; Commissioner calls for right to erasure (MLex summary of OPC statement)",
+    "publisher": "MLex",
+    "url": "https://www.mlex.com/mlex/articles/2410486",
+    "checked": "2026-10-19",
+    "status": "verified"
+  }
+]

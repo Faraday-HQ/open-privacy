@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: Sources and checks
+description: Every primary source this site relies on, when we last checked it, and how we keep the content accurate.
+permalink: /sources/
+---
+{%- set verified = sourcesRegistry | where("status", "verified") | length -%}
+{%- set headFacts -%}<div><dt>Sources</dt><dd>{{ sourcesRegistry | length }}</dd></div><div><dt>Verified by hand</dt><dd>{{ verified }}</dd></div><div><dt>Maximum age</dt><dd>15 months, enforced by the build</dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+<section class="band" aria-labelledby="how-checked">
+  <div class="split">
+    <div class="split-head"><h2 id="how-checked">How we keep it accurate</h2></div>
+    <div class="prose">
+      <p>Privacy law in New Zealand changed a lot in 2025 and 2026, and it will keep changing. So we recheck it on a schedule, and the build enforces it.</p>
+      <ul>
+        <li>Every guide lists the sources it relies on, with the date each was last checked.</li>
+        <li>The site's build fails if any source goes more than 15 months without a recorded check.</li>
+        <li>Sources marked "to verify" are ones we cite for contact details or general reference and haven't yet re-opened since our last review. They're listed for maintainers to confirm before each release.</li>
+        <li>Legal logic in the tools is covered by automated tests, written so a reviewer can follow the reasoning by hand.</li>
+        <li>Anyone can <a href="{{ site.repo }}/issues">report a problem</a>. Corrections are logged in the changelog.</li>
+      </ul>
+      <p>We prefer primary sources, such as legislation, the Privacy Commissioner, and the agency that runs a register or service. Where we cite secondary sources, such as news reports on a bill, we say so.</p>
+    </div>
+  </div>
+</section>
+<section class="band" aria-labelledby="registry">
+  <h2 class="group-title" id="registry">The registry</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Source</th><th>Publisher</th><th>Last checked</th><th>Status</th></tr></thead>
+    <tbody>
+    {% for s in sourcesRegistry %}
+      <tr><td><a href="{{ s.url }}" rel="noopener noreferrer">{{ s.title }}</a>{% if s.note %}<br><span class="small">{{ s.note }}</span>{% endif %}</td><td>{{ s.publisher }}</td><td class="nowrap">{{ s.checked | nzDate }}</td><td class="nowrap">{% if s.status == "verified" %}Verified{% else %}To verify{% endif %}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</section>

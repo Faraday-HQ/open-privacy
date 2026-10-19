@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/answer.njk",
+  "permalink": "/answers/{{ page.fileSlug }}/",
+  "schemaType": "article"
+}

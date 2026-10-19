@@ -1,0 +1,24 @@
+{
+  "name": "Faraday",
+  "tagline": "The Privacy Foundry",
+  "description": "Free, open privacy and online safety help for New Zealand. Plain answers, guides, tools and templates on the Privacy Act, scams, harassment and staying safe online. No sign-up, no tracking.",
+  "url": "https://faraday.co.nz",
+  "repo": "https://github.com/Faraday-HQ/open-privacy",
+  "repoBranch": "main",
+  "founder": "Jacques Cantin",
+  "city": "Auckland",
+  "lang": "en-NZ",
+  "contentLicence": "CC BY 4.0",
+  "codeLicence": "MIT",
+  "lastReviewed": "2026-10-19",
+  "googleVerification": "",
+  "bingVerification": "",
+  "sameAs": [
+    "https://nz.linkedin.com/company/faradayhq",
+    "https://faradayhq.com",
+    "https://github.com/Faraday-HQ"
+  ],
+  "themeColorDark": "#0c1214",
+  "themeColorLight": "#f1f3f1",
+  "indexNowKey": "d32774b8e506d1acad94262c6a087bb3"
+}

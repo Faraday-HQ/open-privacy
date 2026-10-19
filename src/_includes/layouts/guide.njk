@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+{%- set headFacts -%}
+{% if audience %}<div><dt>For</dt><dd>{{ audience }}</dd></div>{% endif %}
+{% if checked %}<div><dt>Checked against sources</dt><dd><time datetime="{{ checked | isoDate }}">{{ checked | nzDate }}</time></dd></div>{% endif %}
+{% include "partials/source-fact.njk" %}
+{%- endset -%}
+{%- set mainHtml -%}
+<div class="prose">{{ content | safe }}</div>
+{% include "partials/related-map.njk" %}
+{% include "partials/sources.njk" %}
+{%- endset -%}
+<article>
+  {% include "partials/page-head.njk" %}
+  {% include "partials/doc-body.njk" %}
+</article>

@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/guide.njk",
+  "permalink": "/guides/organisations/{{ page.fileSlug }}/",
+  "audience": "New Zealand businesses, charities, schools and public bodies",
+  "schemaType": "article"
+}

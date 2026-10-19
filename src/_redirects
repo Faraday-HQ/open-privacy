@@ -1,0 +1,9 @@
+# Send the old domain to the primary one, keeping the path.
+https://faradayhq.com/*        https://faraday.co.nz/:splat    301!
+https://www.faradayhq.com/*    https://faraday.co.nz/:splat    301!
+
+# Short links for printed material and social posts
+/urgent        /help/                          301
+/audit         /tools/exposure-audit/          301
+/deadline      /tools/deadline/                301
+/breach        /tools/breach/                  301

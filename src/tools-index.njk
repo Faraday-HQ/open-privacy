@@ -1,0 +1,26 @@
+---
+schemaType: collection
+layout: layouts/base.njk
+title: Tools
+description: Free tools for privacy deadlines, requests, breaches, indirect collection, exposure and self-assessment. They run in your browser. We don't store any of this information.
+permalink: /tools/
+---
+{%- set headFacts -%}<div><dt>Tools</dt><dd>{{ collections.tools | length }}</dd></div><div><dt>Your data</dt><dd>Never leaves your device</dd></div><div><dt>Sign-up</dt><dd>None</dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+<section class="band" aria-labelledby="tools-list">
+  <h2 class="visually-hidden" id="tools-list">All tools</h2>
+  <ul class="cells c3">
+  {% for t in collections.tools | byOrder %}
+    <li><a class="cell" href="{{ t.url }}"><span class="cell-title">{{ t.data.title }}</span><span class="cell-desc">{{ t.data.description }}</span><span class="cell-foot"><span>{{ t.data.outcome }}</span>{% include "partials/arrow.njk" %}</span></a></li>
+  {% endfor %}
+  </ul>
+</section>
+<section class="band" aria-labelledby="how-built">
+  <div class="split">
+    <div class="split-head"><h2 id="how-built">How these tools are built</h2></div>
+    <div class="prose">
+      <p>Each tool is a static page with a small script. There are no servers, accounts or analytics behind them. Where a tool saves your progress, it uses your browser's storage on your device, and you can clear it with one button.</p>
+      <p>The legal logic is separate from the interface and covered by automated tests. The deadline calculator, for example, is tested against hand-worked examples covering Easter, Matariki, Mondayised holidays and the summer period. Read the code and tests in the <a href="{{ site.repo }}">repository</a>.</p>
+    </div>
+  </div>
+</section>

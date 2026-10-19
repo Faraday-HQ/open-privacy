@@ -1,0 +1,69 @@
+---
+outcome: "5 minutes. Drafts the notice to send."
+layout: layouts/tool.njk
+title: Indirect collection check (IPP 3A)
+description: Since 1 May 2026, if you get someone's personal information from anyone other than them, you usually have to tell them. Check whether you must, and draft the notice.
+permalink: /tools/indirect-collection/
+script: tools/indirect-collection.js
+order: 4
+sources: [opc-ipp3a, opc-ipp3a-flowchart, moj-amendment, pa-s11]
+---
+<form id="ipp3a-form" novalidate>
+  <fieldset>
+    <legend>The collection</legend>
+    <p class="small">Answer for one type of collection at a time, for example "reference checks on job applicants" or "customer lists from a partner".</p>
+    <label for="activity">What is the collection?</label>
+    <input type="text" id="activity" name="activity" placeholder="Reference checks on shortlisted job applicants">
+
+    <label class="choice"><input type="radio" name="source" value="indirect" checked> We get it from someone other than the person it's about</label>
+    <label class="choice"><input type="radio" name="source" value="direct"> We get it from the person themselves</label>
+    <label class="choice"><input type="radio" name="source" value="pppr"> We get it from their attorney, welfare guardian or property manager under the PPPR Act</label>
+
+    <label for="when">When was or will it be collected?</label>
+    <select id="when" name="when">
+      <option value="after">On or after 1 May 2026</option>
+      <option value="before">Before 1 May 2026</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Does an exception apply?</legend>
+    <p class="small">Only tick an exception you could justify to the Privacy Commissioner with evidence. Inconvenience, cost or awkward systems are not enough on their own.</p>
+    {% for ex in ipp3aExceptions %}
+    <label class="choice"><input type="checkbox" name="exceptions" value="{{ ex.id }}"> <span>{{ ex.label }}<span class="hint">{{ ex.hint }}</span></span></label>
+    {% endfor %}
+  </fieldset>
+
+  <fieldset>
+    <legend>Details for the notice</legend>
+    <label for="agency">Your organisation's name</label>
+    <input type="text" id="agency" name="agency">
+    <label for="address">How to contact you <span class="hint">A physical address, email or web page.</span></label>
+    <input type="text" id="address" name="address">
+    <label for="what">What information you collect</label>
+    <input type="text" id="what" name="what" placeholder="Your referees' views on your work history and suitability for the role">
+    <label for="from">Who you collect it from</label>
+    <input type="text" id="from" name="from" placeholder="The referees you nominate">
+    <label for="purpose">Why, specifically <span class="hint">"For business purposes" is not enough. Would the person be surprised? Then say more.</span></label>
+    <input type="text" id="purpose" name="purpose" placeholder="To help us decide whether to offer you the role">
+    <label for="recipients">Who you share it with</label>
+    <input type="text" id="recipients" name="recipients" placeholder="The hiring panel and our HR provider, People Co Ltd">
+    <label for="law">The law that authorises or requires the collection, if any</label>
+    <input type="text" id="law" name="law">
+  </fieldset>
+
+  <button class="btn" type="submit">Check</button>
+</form>
+
+<div class="output" id="ipp3a-output" hidden aria-live="polite"></div>
+
+<div class="prose">
+  <h2>Things people get wrong</h2>
+  <ul>
+    <li><strong>IPP 3A doesn't make indirect collection lawful.</strong> You still need a proper basis under IPP 2 to collect from someone else, and the source needs a basis under IPP 11 to disclose to you.</li>
+    <li><strong>Every agency in a chain can be an indirect collector.</strong> One of you can notify on behalf of the others, but the duty stays with each collector. Put it in the contract and keep evidence.</li>
+    <li><strong>A cloud provider holding data for you isn't collecting it.</strong> Under s 11 of the Privacy Act, information held on your behalf is treated as yours, so the IPP 3A duty is yours.</li>
+    <li><strong>Children's information collected from parents is indirect.</strong> Tell the parent the IPP 3A matters so they can pass them on, as the Commissioner's school camp example shows.</li>
+  </ul>
+  <p>Read the Commissioner's full <a href="https://www.privacy.org.nz/resources-and-learning/a-z-topics/ipp3a/" class="ext" rel="noopener noreferrer">IPP 3A guidance</a> before relying on an exception that involves an investigation or a "prejudice" judgement.</p>
+</div>

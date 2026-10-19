@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+---
+{%- set body = content | demoteH1 -%}
+{%- set headFacts -%}
+{% if checked %}<div><dt>Checked against sources</dt><dd><time datetime="{{ checked | isoDate }}">{{ checked | nzDate }}</time></dd></div>{% endif %}
+<div><dt>Licence</dt><dd>CC BY 4.0, free to adapt</dd></div>
+{% include "partials/source-fact.njk" %}
+{%- endset -%}
+{%- set mainHtml -%}
+{% if downloads %}
+<div class="callout download-box">
+  <p class="btn-row">{% for d in downloads %}<a class="btn{% if not loop.first %} secondary{% endif %}" href="/downloads/{{ d.file }}" download>{{ d.label }}</a>{% endfor %}</p>
+  <p class="small">Remove the guidance notes in square brackets before you publish.</p>
+</div>
+{% endif %}
+<div class="prose">{{ body | safe }}</div>
+{% include "partials/sources.njk" %}
+{%- endset -%}
+<article>
+  {% include "partials/page-head.njk" %}
+  {%- set tocSource = body %}
+  {% include "partials/doc-body.njk" %}
+</article>

@@ -1,0 +1,17 @@
+---
+schemaType: collection
+layout: layouts/base.njk
+title: Guides for organisations
+description: The Privacy Act 2020 applied to real New Zealand situations. Written for the person who got handed privacy on top of their actual job.
+permalink: /guides/organisations/
+---
+{%- set headFacts -%}<div><dt>Guides</dt><dd>{{ collections.organisations | length }}</dd></div><div><dt>Templates</dt><dd><a href="/templates/">{{ collections.templates | length }} to adapt</a></dd></div><div><dt>Regulator's framework</dt><dd><a href="https://www.privacy.org.nz/responsibilities/poupou-matatapu-doing-privacy-well/" class="ext" rel="noopener noreferrer">Poupou Matatapu</a></dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+<section class="band" aria-labelledby="guides-title">
+  <h2 class="visually-hidden" id="guides-title">Guides</h2>
+  <ul class="rows split-rows">
+  {% for g in collections.organisations | byOrder %}
+    <li><a class="row" href="{{ g.url }}"><span class="row-title">{{ g.data.title }}</span><span class="row-desc">{{ g.data.description }}</span></a></li>
+  {% endfor %}
+  </ul>
+</section>

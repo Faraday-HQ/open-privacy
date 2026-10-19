@@ -1,0 +1,28 @@
+---
+schemaType: collection
+layout: layouts/base.njk
+title: Guides for people and whānau
+description: Practical privacy and online safety for life in Aotearoa. Start with what worries you.
+permalink: /guides/people/
+quickExit: true
+---
+{%- set headFacts -%}<div><dt>Guides</dt><dd>{{ collections.people | length }}</dd></div><div><dt>Something happening now?</dt><dd><a href="/help/">Get help now</a></dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+<section class="band" aria-labelledby="guides-title">
+  <h2 class="visually-hidden" id="guides-title">Guides</h2>
+  <ul class="rows split-rows">
+  {% for g in collections.people | byOrder %}
+    <li><a class="row" href="{{ g.url }}"><span class="row-title">{{ g.data.title }}</span><span class="row-desc">{{ g.data.description }}</span></a></li>
+  {% endfor %}
+  </ul>
+</section>
+<section class="band" aria-labelledby="tools-title">
+  <div class="split">
+    <div class="split-head"><h2 id="tools-title">Tools for this</h2><p>Work through it step by step. Everything runs in your browser.</p></div>
+    <ul class="cells c2">
+      <li><a class="cell" href="/tools/exposure-audit/"><span class="cell-title">Personal exposure audit</span><span class="cell-desc">Check the places your name, address and routines are published, and fix what you can.</span></a></li>
+      <li><a class="cell" href="/tools/request-letter/"><span class="cell-title">Request letter builder</span><span class="cell-desc">Ask an organisation for your information, ask for a correction, or chase a late reply.</span></a></li>
+      <li><a class="cell" href="/templates/digital-safety-plan/"><span class="cell-title">Digital safety plan</span><span class="cell-desc">A worksheet for planning changes to devices and accounts safely, with an advocate if you have one.</span></a></li>
+    </ul>
+  </div>
+</section>

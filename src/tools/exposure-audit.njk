@@ -1,0 +1,51 @@
+---
+outcome: "About an hour. Builds your action list, highest impact first."
+layout: layouts/tool.njk
+title: Personal exposure audit
+description: Work through the places New Zealanders' names, addresses and routines are most often published, check yourself, and fix what you can.
+permalink: /tools/exposure-audit/
+script: tools/exposure-audit.js
+storesLocally: true
+quickExit: true
+order: 5
+sources: [vote-unpublished, companies-address, iod-address, rating-28c, dcc-rid-form, ppsr-search, howexposed, apple-personal-safety]
+---
+<div class="prose">
+  <p>This self-audit comes from Faraday's earlier client work, and it's free for anyone to use. It takes about an hour if you do it all at once, or you can do a section at a time. Start with the items marked as higher impact if you're short on time or worried about someone in particular.</p>
+  <p>If someone who knows you well, such as a current or former partner, may be monitoring your devices, use a device they've never had access to and read the <a href="/guides/people/tech-abuse/">technology-facilitated abuse guide</a> before changing anything.</p>
+</div>
+
+<div class="output" id="audit-summary" aria-live="polite">
+  <p><strong id="audit-count">0 of 0 checked</strong></p>
+  <div class="progress" aria-hidden="true"><span id="audit-bar"></span></div>
+  <p class="small">Saved on this device only.</p>
+  <button class="btn" type="button" id="audit-export">Download my action list</button>
+  <button class="btn secondary" type="button" id="audit-reset">Clear my answers</button>
+</div>
+
+<form id="audit-form">
+{% for group in exposure %}
+  <section class="section" aria-labelledby="g-{{ group.id }}">
+    <h2 id="g-{{ group.id }}">{{ group.title }}</h2>
+    <p class="section-intro">{{ group.intro }}</p>
+    {% for item in group.items %}
+    <div class="audit-item" data-item="{{ item.id }}">
+      <h3>{{ item.title }}{% if item.weight >= 3 %} <span class="verdict high">Higher impact</span>{% endif %}</h3>
+      <p><strong>What it can reveal:</strong> {{ item.shows }}</p>
+      <details>
+        <summary>How to check yourself, and what to do</summary>
+        <p><strong>Check:</strong> {{ item.check }}</p>
+        <p><strong>Reduce:</strong> {{ item.reduce }}</p>
+        {% if item.link %}<p><a href="{{ item.link }}">{{ item.linkText }}</a></p>{% endif %}
+      </details>
+      <fieldset class="audit-status">
+        <legend class="small">Where are you with this?</legend>
+        <label class="choice"><input type="radio" name="{{ item.id }}" value="todo"> Checked, needs action</label>
+        <label class="choice"><input type="radio" name="{{ item.id }}" value="done"> Checked, dealt with</label>
+        <label class="choice"><input type="radio" name="{{ item.id }}" value="na"> Doesn't apply to me</label>
+      </fieldset>
+    </div>
+    {% endfor %}
+  </section>
+{% endfor %}
+</form>

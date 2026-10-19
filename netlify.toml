@@ -1,0 +1,62 @@
+# Netlify configuration for faraday.co.nz
+# The site is fully static. Nothing here collects data about visitors.
+
+[build]
+  # Production runs the full check too: tests, prose lint, source staleness, build,
+  # link and search checks. If any fail, the live site stays as it was.
+  command = "npm run check"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Run the tests and the prose linter on deploy previews too, so a broken
+# deadline calculator or an AI-ism never reaches production.
+[context.deploy-preview]
+  command = "npm run check"
+
+[context.production]
+  command = "npm run check"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"
+    Referrer-Policy = "no-referrer"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    Content-Disposition = "attachment"
+    # The HTML template pages are the canonical, indexable versions.
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/og/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/llms-full.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+# Tells Bing, Yandex and other IndexNow engines about new and changed pages after
+# each production deploy. See plugins/indexnow/index.js.
+[[plugins]]
+  package = "./plugins/indexnow"

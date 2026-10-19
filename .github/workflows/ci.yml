@@ -1,0 +1,56 @@
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Unit tests (legal logic)
+        run: npm test
+      - name: Prose lint (AI-isms, NZ spelling)
+        run: npm run lint:prose
+      - name: Source registry (staleness, unknown ids)
+        run: npm run check:sources
+      - name: Build
+        run: npm run build
+      - name: Internal links and anchors
+        run: npm run check:links
+      - name: Search metadata and structured data
+        run: npm run check:seo
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+
+  links:
+    # External link check runs only when started by hand (Actions > Checks > Run workflow),
+    # so a slow government website never blocks a change.
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: check
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --max-retries 3 --timeout 30 --accept 200,201,204,301,302,403,429 --root-dir "${{ github.workspace }}/_site" "_site/**/*.html"
+          fail: true

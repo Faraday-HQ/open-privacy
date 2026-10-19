@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+schemaType: glossary
+title: Privacy and online safety glossary for New Zealand
+seoTitle: NZ privacy and online safety glossary
+description: Plain definitions of the terms used in New Zealand privacy law and online safety, from agency and IPP 3A to sextortion, SIM swaps and the unpublished roll.
+permalink: /glossary/
+checked: 2026-10-19
+---
+{%- set headTitle = "Glossary" -%}
+{%- set headLede = "Plain definitions of the terms used in New Zealand privacy law and online safety. Each links to the page that explains it in full." -%}
+{%- set headFacts -%}<div><dt>Terms</dt><dd>{{ glossary | length }}</dd></div><div><dt>Checked</dt><dd>{{ checked | nzDate }}</dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+<section class="band tight" aria-label="Jump to a term">
+  <ul class="glossary-index">
+  {% for t in glossary %}<li><a href="#{{ t.id }}">{{ t.term }}</a></li>{% endfor %}
+  </ul>
+</section>
+<section class="band" aria-label="Definitions">
+  <dl class="glossary">
+  {% for t in glossary %}
+    <div><dt id="{{ t.id }}">{{ t.term }}</dt>
+    <dd><p>{{ t.short }} {{ t.long }}</p><p><a href="{{ t.link }}">Read more</a></p></dd></div>
+  {% endfor %}
+  </dl>
+</section>

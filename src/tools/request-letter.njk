@@ -1,0 +1,82 @@
+---
+outcome: "5 minutes. Writes a letter ready to send."
+layout: layouts/tool.njk
+title: Request letter builder
+description: Write a request for the personal information an organisation holds about you, a correction request, or a follow-up when they miss the deadline.
+permalink: /tools/request-letter/
+script: tools/request-letter.js
+order: 2
+sources: [pa-s44, pa-s7, opc-ask, opc-correct, opc-aboutme, opc-complain]
+---
+<div class="prose">
+  <p>Anyone can ask any New Zealand organisation, public or private, for the personal information it holds about them. You don't need to give a reason or mention the Privacy Act, but naming it helps the request reach the right person. The Privacy Commissioner also runs <a href="https://www.privacy.org.nz/your-rights/aboutme-request-my-info-tool/" class="ext" rel="noopener noreferrer">AboutMe</a>, which sends requests for you. Use this builder if you would rather keep a copy, send it yourself, or need a correction or follow-up letter.</p>
+</div>
+
+<form id="letter-form" novalidate>
+  <fieldset>
+    <legend>What do you need?</legend>
+    <label class="choice"><input type="radio" name="kind" value="access" checked> Ask for a copy of my information</label>
+    <label class="choice"><input type="radio" name="kind" value="correction"> Ask them to correct information</label>
+    <label class="choice"><input type="radio" name="kind" value="followup"> Chase a request they haven't answered</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>You and them</legend>
+    <label for="name">Your full name</label>
+    <input type="text" id="name" name="name" autocomplete="name">
+    <label for="contact">How they should reply to you <span class="hint">An email address or postal address.</span></label>
+    <input type="text" id="contact" name="contact">
+    <label for="other">Other details that help them find your records <span class="hint">Customer or account number, staff number, previous names, date of birth. Only what's needed.</span></label>
+    <input type="text" id="other" name="other">
+    <label for="agency">Organisation's name</label>
+    <input type="text" id="agency" name="agency">
+  </fieldset>
+
+  <fieldset data-for="access">
+    <legend>What you want</legend>
+    <label for="scope">Which information <span class="hint">Leave blank to ask for everything. Being specific usually gets a faster answer.</span></label>
+    <textarea id="scope" name="scope" placeholder="For example: emails and notes that mention me between March 2025 and now; CCTV footage of me at the Ponsonby store on 3 October 2026 between 2pm and 3pm; recordings of my calls."></textarea>
+    <label class="choice"><input type="checkbox" name="electronic" value="yes" checked> I'd like an electronic copy</label>
+    <label class="choice"><input type="checkbox" name="sources" value="yes"> Tell me where they got any information they didn't collect from me</label>
+    <label class="choice"><input type="checkbox" name="urgent" value="yes"> I need this urgently</label>
+    <label for="urgentReason">Why it's urgent <span class="hint">For example, a hearing date, a job offer deadline or a tenancy application.</span></label>
+    <input type="text" id="urgentReason" name="urgentReason">
+  </fieldset>
+
+  <fieldset data-for="correction" hidden>
+    <legend>What's wrong</legend>
+    <label for="wrong">The information that is wrong</label>
+    <textarea id="wrong" name="wrong"></textarea>
+    <label for="right">What it should say</label>
+    <textarea id="right" name="right"></textarea>
+    <label for="evidence">Evidence you're attaching (optional)</label>
+    <input type="text" id="evidence" name="evidence">
+  </fieldset>
+
+  <fieldset data-for="followup" hidden>
+    <legend>Your original request</legend>
+    <label for="sent">Date they received your request</label>
+    <input type="date" id="sent" name="sent">
+  </fieldset>
+
+  <button class="btn" type="submit">Write my letter</button>
+</form>
+
+<div class="output" id="letter-output" hidden aria-live="polite">
+  <h2>Your letter</h2>
+  <p class="small" id="letter-deadline"></p>
+  <pre id="letter-text"></pre>
+  <button class="btn" type="button" id="copy-letter">Copy letter</button>
+  <button class="btn secondary" type="button" id="download-letter">Download as text</button>
+</div>
+
+<div class="prose">
+  <h2>After you send it</h2>
+  <ul>
+    <li>Send it to the organisation's privacy officer if you can find one. Every agency must have one. Otherwise, use its general contact address.</li>
+    <li>Keep a copy and note the date it was received. The <a href="/tools/deadline/">deadline calculator</a> works out the 20 working-day limit.</li>
+    <li>They may ask you to prove who you are before releasing anything. That's normal and protects you.</li>
+    <li>Public sector agencies generally can't charge for access. A private sector agency can only charge in limited cases, must tell you in advance, and the charge must be reasonable.</li>
+    <li>They can withhold some information for reasons the Act lists, but they must tell you what they withheld and why, and that you can complain to the Privacy Commissioner.</li>
+  </ul>
+</div>

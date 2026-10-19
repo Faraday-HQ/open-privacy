@@ -1,0 +1,33 @@
+---
+seoTitle: Privacy questions answered for New Zealand
+metaDescription: "Short, sourced answers to the privacy and online safety questions New Zealanders ask most, from recording calls and cameras to landlords and Police."
+layout: layouts/base.njk
+schemaType: collection
+title: Answers to common privacy questions in New Zealand
+description: Short, sourced answers to the privacy and online safety questions New Zealanders ask most, from recording calls and neighbour cameras to landlords, employers, Police and the Privacy Act.
+permalink: /answers/
+---
+{%- set headTitle = "Answers" -%}
+{%- set headLede = "Short, sourced answers to the questions New Zealanders ask most about privacy and online safety. Each one starts with the answer, then explains the detail and what you can do." -%}
+{%- set headFacts -%}<div><dt>Answers</dt><dd>{{ collections.answers | length }}</dd></div><div><dt>Also</dt><dd><a href="/scams/">Current scams</a>, <a href="/glossary/">glossary</a></dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+{% set groups = [
+  ["everyday", "At home and in public"],
+  ["work", "At work, renting and with businesses"],
+  ["government", "Health, records and Police"],
+  ["online", "Online and on your phone"],
+  ["rights", "Your Privacy Act rights"],
+  ["business", "For businesses and organisations"]
+] %}
+<div class="band">
+{% for g in groups %}
+  <section class="group split" aria-labelledby="a-{{ g[0] }}">
+    <div class="split-head"><h2 class="group-title" id="a-{{ g[0] }}">{{ g[1] }}</h2></div>
+    <ul class="rows">
+    {% for a in collections.answers %}{% if a.data.cluster == g[0] %}
+      <li><a class="row" href="{{ a.url }}"><span class="row-title">{{ a.data.title }}</span><span class="row-desc">{{ a.data.answer | truncate(150) }}</span></a></li>
+    {% endif %}{% endfor %}
+    </ul>
+  </section>
+{% endfor %}
+</div>

@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+{%- set headFacts -%}
+<div><dt>Published</dt><dd><time datetime="{{ page.date | isoDate }}">{{ page.date | nzDate }}</time></dd></div>
+{% if author %}<div><dt>Written by</dt><dd>{{ author }}</dd></div>{% endif %}
+{% include "partials/source-fact.njk" %}
+{%- endset -%}
+{%- set mainHtml -%}
+<div class="prose">{{ content | safe }}</div>
+{% include "partials/sources.njk" %}
+{%- endset -%}
+<article>
+  {% include "partials/page-head.njk" %}
+  {% include "partials/doc-body.njk" %}
+</article>

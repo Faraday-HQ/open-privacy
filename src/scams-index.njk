@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+schemaType: collection
+title: Current scams in New Zealand
+seoTitle: Current scams in New Zealand and how to spot them
+description: How the scams hitting New Zealand phones and inboxes work right now, how to tell they're fake, and exactly what to do if you've been caught.
+permalink: /scams/
+---
+{% include "partials/page-head.njk" %}
+<section class="band tight" aria-label="If you've already been caught">
+  <div class="callout urgent">
+    <p><strong>Lost money or shared details?</strong> Call your bank first, on the number on your card. Then see <a href="/help/#scammed">what to do in the first hour</a>.</p>
+  </div>
+</section>
+<section class="band" aria-labelledby="scam-list">
+  <h2 class="visually-hidden" id="scam-list">Scams</h2>
+  <ul class="rows split-rows">
+  {% for s in collections.scams | byOrder %}
+    <li><a class="row" href="{{ s.url }}"><span class="row-title">{{ s.data.title }}</span><span class="row-desc">{{ s.data.answer | truncate(150) }}</span></a></li>
+  {% endfor %}
+  </ul>
+</section>
+<section class="band" aria-labelledby="one-rule">
+  <div class="split">
+    <div class="split-head"><h2 id="one-rule">The one rule</h2></div>
+    <div class="prose">
+      <p>Never act on contact you didn't start. If a message, call or email asks for money, a code, a password or access to your device, stop and contact the organisation yourself using its app, a website you type in, or the number on your card.</p>
+      <p>Forward scam texts to <strong>7726</strong>. Report scams to Netsafe on <strong>0508 638 723</strong> and cyber incidents to the National Cyber Security Centre on <strong>0800 114 115</strong>.</p>
+      <p>For the patterns behind every scam, read <a href="/guides/people/scams/">how scams work on New Zealanders</a>.</p>
+    </div>
+  </div>
+</section>

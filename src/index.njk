@@ -1,0 +1,144 @@
+---
+layout: layouts/base.njk
+title: "Privacy help for Aotearoa. Free."
+description: Free guides, tools and templates for people protecting themselves online and organisations meeting the Privacy Act. No sign-up, no tracking, no invoice.
+permalink: /
+script: tools/hero-deadline.js
+---
+<section class="band hero" aria-labelledby="hero-title">
+  <div class="hero-grid">
+    <div>
+      <h1 id="hero-title">Privacy help for Aotearoa. Free.</h1>
+      <p class="lede">Guides, tools and templates for people protecting themselves and organisations meeting the Privacy Act. Written for Aotearoa, checked against the law, free to use and adapt.</p>
+      <div class="btn-row">
+        <a class="btn" href="/answers/">Find an answer</a>
+        <a class="btn secondary" href="/tools/">Use the free tools</a>
+      </div>
+      <dl class="facts hero-facts">
+        <div><dt>Cost</dt><dd>Free, no sign-up</dd></div>
+        <div><dt>Tracking</dt><dd>None</dd></div>
+        <div><dt>Sources</dt><dd><a href="/sources/">{{ sourcesRegistry | length }} checked</a></dd></div>
+        <div><dt>Licence</dt><dd>CC BY 4.0</dd></div>
+      </dl>
+    </div>
+    {%- set dl = site.lastReviewed | deadlineSummary %}
+    <form class="spec deadline-panel" id="hero-deadline-form" aria-labelledby="hero-deadline-title" novalidate>
+      <div class="panel-bar"><span class="lead" id="hero-deadline-title">When must they reply?</span><span class="aside">Privacy Act, s 44</span></div>
+      <div class="deadline-body">
+        <p class="deadline-intro">Asked an organisation for the information it holds about you? It has 20 working days to respond.</p>
+        <div class="deadline-input">
+          <label for="hero-received">Date they received your request</label>
+          <input type="date" id="hero-received" name="received">
+        </div>
+        <div class="deadline-result" aria-live="polite">
+          <span class="deadline-label" id="hero-deadline-label">For a request received {{ dl.received }}, the reply is due by</span>
+          <time class="deadline-date" id="hero-deadline-date" datetime="{{ dl.deadlineIso }}">{{ dl.deadline }}</time>
+          <span class="deadline-note" id="hero-deadline-note">{{ dl.note }}</span>
+        </div>
+      </div>
+      <div class="deadline-foot">
+        <a href="/tools/deadline/">Full calculator, with every day it skips</a>
+        <a href="/tools/request-letter/">Write or chase a request</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="band routes-band" aria-label="Where to start">
+  <ul class="cells c3 routes">
+    <li><a class="cell urgent" href="/help/">
+      <span class="cell-title">Something is happening now</span>
+      <span class="cell-desc">Scams, hacked accounts, threats, harassment, images shared without consent. What to do first and who to call.</span>
+      <span class="cell-foot"><span>Get help now</span>{% include "partials/arrow.njk" %}</span>
+    </a></li>
+    <li><a class="cell" href="/guides/people/">
+      <span class="cell-title">Protect myself and my whānau</span>
+      <span class="cell-desc">Find out what's public about you, lock down accounts, deal with harassment, and use your rights under the Privacy Act.</span>
+      <span class="cell-foot"><span>{{ collections.people | length }} guides</span>{% include "partials/arrow.njk" %}</span>
+    </a></li>
+    <li><a class="cell" href="/guides/organisations/">
+      <span class="cell-title">Run privacy at my organisation</span>
+      <span class="cell-desc">The Privacy Act in plain language, breach response, IPP 3A, biometrics, AI, and templates you can adopt today.</span>
+      <span class="cell-foot"><span>{{ collections.organisations | length }} guides, {{ collections.templates | length }} templates</span>{% include "partials/arrow.njk" %}</span>
+    </a></li>
+  </ul>
+</section>
+
+<section class="band" aria-labelledby="questions-title">
+  <div class="split">
+    <div class="split-head">
+      <h2 id="questions-title">Questions New Zealanders ask</h2>
+      <p>Short, sourced answers. Each starts with the answer, then the detail and what you can do.</p>
+      <p class="more"><a href="/answers/">All {{ collections.answers | length }} answers</a>, <a href="/scams/">current scams</a> and the <a href="/glossary/">glossary</a></p>
+    </div>
+    {% set featured = ["recording-conversations-nz", "neighbour-cctv-nz", "employer-monitoring-nz", "landlord-what-can-they-ask-nz", "get-my-medical-records-nz", "remove-personal-information-from-google-nz", "deepfakes-law-nz", "do-i-need-a-privacy-policy-nz"] %}
+    <ul class="rows">
+    {% for slug in featured %}{% for a in collections.answers %}{% if a.fileSlug == slug %}
+      <li><a class="row" href="{{ a.url }}"><span class="row-title">{{ a.data.title }}</span></a></li>
+    {% endif %}{% endfor %}{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="changes-title">
+  <div class="split">
+    <div class="split-head">
+      <h2 id="changes-title">What has changed in New Zealand privacy law</h2>
+      <p>Since September 2025, privacy law has moved more than in the five years before. If your privacy statement or processes were written before this, they probably need work.</p>
+    </div>
+    <ol class="rows meta-first static timeline">
+      <li><div class="row"><time class="row-meta" datetime="2025-09-24">24 Sep 2025</time><div><span class="row-title">Privacy Amendment Act 2025 in force</span><p class="row-desc">Everything except the new indirect collection rule.</p></div></div></li>
+      <li><div class="row"><time class="row-meta" datetime="2025-11-03">3 Nov 2025</time><div><span class="row-title">Biometric Processing Privacy Code applies to new processing</span><p class="row-desc"><a href="/guides/organisations/biometrics-code/">What the code requires</a></p></div></div></li>
+      <li><div class="row"><time class="row-meta" datetime="2025-12-01">1 Dec 2025</time><div><span class="row-title">Open banking begins</span><p class="row-desc">The Customer and Product Data Act starts with the four largest banks.</p></div></div></li>
+      <li><div class="row"><time class="row-meta" datetime="2026-05-01">1 May 2026</time><div><span class="row-title">IPP 3A in force</span><p class="row-desc">Tell people when you collect their information from someone else. <a href="/tools/indirect-collection/">Check your collections</a></p></div></div></li>
+      <li><div class="row"><time class="row-meta" datetime="2026-05-25">25 May 2026</time><div><span class="row-title">Manage My Health and Health NZ found in breach of the security rule</span><p class="row-desc"><a href="/blog/manage-my-health-lessons/">What it means for you</a></p></div></div></li>
+      <li><div class="row"><time class="row-meta" datetime="2026-08-03">3 Aug 2026</time><div><span class="row-title">Biometric code covers existing processing</span><p class="row-desc">The transition period for systems already running has ended.</p></div></div></li>
+      <li><div class="row"><time class="row-meta" datetime="2026-11-18">18 Nov 2026</time><div><span class="row-title">Directors can replace their home address on the Companies Register</span><p class="row-desc">For directors with safety concerns. <a href="/blog/director-home-addresses/">How to prepare</a></p></div></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="tools-title">
+  <div class="split">
+    <div class="split-head">
+      <h2 id="tools-title">Tools that run in your browser</h2>
+      <p>Nothing you type leaves your device, and there's nothing to sign up for.</p>
+      <p class="more"><a href="/tools/">All tools</a></p>
+    </div>
+    <ul class="cells c2">
+    {% for t in collections.tools | byOrder %}
+      <li><a class="cell" href="{{ t.url }}"><span class="cell-title">{{ t.data.title }}</span><span class="cell-desc">{{ t.data.description }}</span></a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="blog-title">
+  <div class="split">
+    <div class="split-head">
+      <h2 id="blog-title">From the blog</h2>
+      <p>What's changing in New Zealand privacy and online safety, and what to do about it.</p>
+      <p class="more"><a href="/blog/">All posts</a></p>
+    </div>
+    <ul class="rows meta-first">
+    {% for post in collections.posts | limit(4) %}
+      <li><a class="row" href="{{ post.url }}"><time class="row-meta" datetime="{{ post.date | isoDate }}">{{ post.date | nzDate }}</time><div><span class="row-title">{{ post.data.title }}</span><p class="row-desc">{{ post.data.description }}</p></div></a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="why-title">
+  <div class="split">
+    <div class="split-head">
+      <h2 id="why-title">Why this is free</h2>
+    </div>
+    <div>
+      <p class="big-statement">Much of what privacy consultancies charge for is applying publicly accessible guidance and law to ordinary situations. The method can be written down, so we wrote it down.</p>
+      <div class="statement-body">
+        <p>Some things are still worth paying for, such as help when you're facing a legal challenge, incident response and forensic help after a cyber attack, or a specialist for a complex impact assessment. We say so plainly.</p>
+      </div>
+      <div class="btn-row"><a class="btn secondary" href="/open/">See what's free and what's worth paying for</a></div>
+    </div>
+  </div>
+</section>

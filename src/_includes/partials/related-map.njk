@@ -1,0 +1,11 @@
+{%- set mapped = relatedMap[page.url] -%}
+{%- if mapped and mapped.length -%}
+<section class="doc-section related" aria-labelledby="related-map-heading">
+  <h2 id="related-map-heading">Common questions</h2>
+  <ul class="rows">
+  {%- for u in mapped -%}
+    {%- for p in collections.all -%}{%- if p.url == u -%}<li><a class="row" href="{{ u }}"><span class="row-title">{{ p.data.title }}</span></a></li>{%- endif -%}{%- endfor -%}
+  {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}

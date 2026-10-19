@@ -1,0 +1,82 @@
+---
+outcome: "15 minutes. Tells you whether to notify, with a record to keep."
+layout: layouts/tool.njk
+title: Breach assessment record
+description: Work through the serious-harm factors in section 113 of the Privacy Act and leave with a written record of your decision.
+permalink: /tools/breach/
+script: tools/breach.js
+order: 3
+sources: [pa-s112, pa-s113, pa-s114, pa-s115, pa-s116, pa-s118, opc-breaches, opc-breach-pou]
+---
+<div class="callout urgent">
+  <p><strong>If this is happening now, contain it first.</strong> Disconnect affected systems, revoke access, ask recipients to delete, and preserve logs. For a cyber attack, call the National Cyber Security Centre on 0800 114 115. Then come back and record your assessment.</p>
+</div>
+
+<form id="breach-form" novalidate>
+  <fieldset>
+    <legend>The basics</legend>
+    <label for="agency">Organisation</label>
+    <input type="text" id="agency" name="agency">
+    <label for="awareDate">Date you became aware</label>
+    <input type="date" id="awareDate" name="awareDate">
+    <label for="summary">What happened, in two or three sentences</label>
+    <textarea id="summary" name="summary"></textarea>
+    <label for="count">Roughly how many people are affected?</label>
+    <input type="text" inputmode="numeric" id="count" name="count" value="1">
+  </fieldset>
+
+  <fieldset>
+    <legend>What happened to the information? (s 112)</legend>
+    <p class="small">Tick everything that applies.</p>
+    {% for key, label in breachOptions.types %}
+    <label class="choice"><input type="checkbox" name="types" value="{{ key }}"> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <fieldset>
+    <legend>Is any of it sensitive? (s 113(b))</legend>
+    {% for key, label in breachOptions.sensitive %}
+    <label class="choice"><input type="checkbox" name="sensitive" value="{{ key }}"> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <fieldset>
+    <legend>What harm could realistically follow? (s 113(c))</legend>
+    <p class="small">Think about the most vulnerable person affected.</p>
+    {% for key, label in breachOptions.harms %}
+    <label class="choice"><input type="checkbox" name="harms" value="{{ key }}"> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <fieldset>
+    <legend>Who has it, or might? (s 113(d))</legend>
+    {% for key, label in breachOptions.recipients %}
+    <label class="choice"><input type="radio" name="recipient" value="{{ key }}"{% if key == "unknown" %} checked{% endif %}> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <fieldset>
+    <legend>Was it protected? (s 113(e))</legend>
+    {% for key, label in breachOptions.protection %}
+    <label class="choice"><input type="radio" name="protection" value="{{ key }}"{% if key == "none" %} checked{% endif %}> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <fieldset>
+    <legend>What have you done to reduce the risk? (s 113(a))</legend>
+    {% for key, label in breachOptions.containment %}
+    <label class="choice"><input type="radio" name="containment" value="{{ key }}"{% if key == "none" %} checked{% endif %}> {{ label }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <button class="btn" type="submit">Assess</button>
+</form>
+
+<div class="output" id="breach-output" hidden aria-live="polite"></div>
+
+<div class="prose">
+  <h2>How to read the result</h2>
+  <p>The Privacy Act asks whether it is reasonable to believe the breach has caused serious harm, or is likely to. It does not define serious harm with a formula, and neither do we. This aid weighs the s 113 factors and applies three rules that no points total should override. A criminal holding unprotected data, the location of someone at risk reaching the wrong person, and exposed credentials are each treated as notifiable.</p>
+  <p>Not notifying a notifiable breach is an offence with a fine of up to $10,000. Notifying something that turns out to be minor costs you an email. When you're unsure, notify.</p>
+  <p>Report to the Commissioner through <a href="https://www.privacy.org.nz/responsibilities/privacy-breaches/" class="ext" rel="noopener noreferrer">NotifyUs</a>. Use our <a href="/templates/breach-response-plan/">breach response plan</a> and <a href="/downloads/breach-register.csv">breach register</a> to keep the paper trail.</p>
+</div>

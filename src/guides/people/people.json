@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/guide.njk",
+  "permalink": "/guides/people/{{ page.fileSlug }}/",
+  "audience": "People and wh\u0101nau in New Zealand",
+  "schemaType": "article"
+}

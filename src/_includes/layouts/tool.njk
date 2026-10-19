@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+{%- set headFacts -%}
+{% if audience %}<div><dt>For</dt><dd>{{ audience }}</dd></div>{% endif %}
+<div><dt>Your data</dt><dd>Runs in your browser. Nothing you type is sent anywhere.{% if storesLocally %} Progress is saved on this device only.{% endif %}</dd></div>
+{% include "partials/source-fact.njk" %}
+{%- endset -%}
+<article>
+  {% include "partials/page-head.njk" %}
+  <div class="band doc-body">
+    <div class="tool">
+      {{ content | safe }}
+      {% include "partials/sources.njk" %}
+    </div>
+  </div>
+</article>
