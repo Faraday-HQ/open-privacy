@@ -1,0 +1,77 @@
+{%- set pageUrl = site.url + page.url -%}
+{%- set ogImage = site.url + "/og/" + (page.url | ogSlug) + ".png" -%}
+{%- set org = {
+  "@type": "Organization",
+  "@id": site.url + "/#organization",
+  "name": "Faraday",
+  "alternateName": "Faraday, The Privacy Foundry",
+  "url": site.url + "/",
+  "logo": { "@type": "ImageObject", "url": site.url + "/assets/logo.png", "width": 512, "height": 512 },
+  "email": site.email,
+  "sameAs": site.sameAs,
+  "areaServed": { "@type": "Country", "name": "New Zealand" },
+  "founder": { "@type": "Person", "name": site.founder, "sameAs": site.founderSameAs },
+  "knowsAbout": ["Privacy Act 2020", "Information privacy", "Online safety", "Data governance", "Harmful Digital Communications Act 2015", "Cyber security", "Māori data sovereignty"]
+} -%}
+{%- set graph = [org, {
+  "@type": "WebSite",
+  "@id": site.url + "/#website",
+  "url": site.url + "/",
+  "name": "Faraday",
+  "description": site.description,
+  "inLanguage": "en-NZ",
+  "publisher": { "@id": site.url + "/#organization" }
+}] -%}
+{%- set crumbs = page.url | breadcrumbs(title) -%}
+{%- if crumbs.length -%}
+  {%- set items = [] -%}
+  {%- for c in crumbs -%}
+    {%- set _ = items.push({ "@type": "ListItem", "position": loop.index, "name": c.name, "item": site.url + c.url }) -%}
+  {%- endfor -%}
+  {%- set _ = graph.push({ "@type": "BreadcrumbList", "itemListElement": items }) -%}
+{%- endif -%}
+{%- set modified = (checked or page.date) | isoDateTime -%}
+{%- if schemaType == "tool" -%}
+  {%- set _ = graph.push({
+    "@type": "WebApplication",
+    "@id": pageUrl + "#app",
+    "name": title,
+    "description": description,
+    "url": pageUrl,
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any (runs in the browser)",
+    "isAccessibleForFree": true,
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NZD" },
+    "inLanguage": "en-NZ",
+    "publisher": { "@id": site.url + "/#organization" }
+  }) -%}
+{%- elif schemaType == "glossary" -%}
+  {%- set terms = [] -%}
+  {%- for t in glossary -%}
+    {%- set _ = terms.push({ "@type": "DefinedTerm", "@id": pageUrl + "#" + t.id, "name": t.term, "description": t.short, "inDefinedTermSet": pageUrl }) -%}
+  {%- endfor -%}
+  {%- set _ = graph.push({ "@type": "DefinedTermSet", "@id": pageUrl, "name": title, "description": description, "hasDefinedTerm": terms, "inLanguage": "en-NZ" }) -%}
+{%- elif schemaType == "article" -%}
+  {%- set art = {
+    "@type": "Article",
+    "@id": pageUrl + "#article",
+    "headline": title,
+    "description": description,
+    "url": pageUrl,
+    "mainEntityOfPage": pageUrl,
+    "image": ogImage,
+    "datePublished": (published or page.date) | isoDateTime,
+    "dateModified": modified,
+    "inLanguage": "en-NZ",
+    "isAccessibleForFree": true,
+    "author": { "@id": site.url + "/#organization" },
+    "publisher": { "@id": site.url + "/#organization" },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "spatialCoverage": { "@type": "Country", "name": "New Zealand" }
+  } -%}
+  {%- if reviewedBy -%}{%- set _ = art | setAttr("reviewedBy", { "@type": "Person", "name": reviewedBy }) -%}{%- endif -%}
+  {%- set _ = graph.push(art) -%}
+{%- elif schemaType == "collection" -%}
+  {%- set _ = graph.push({ "@type": "CollectionPage", "@id": pageUrl, "name": title, "description": description, "url": pageUrl, "inLanguage": "en-NZ", "isPartOf": { "@id": site.url + "/#website" } }) -%}
+{%- endif -%}
+<script type="application/ld+json">{{ { "@context": "https://schema.org", "@graph": graph } | jsonLd | safe }}</script>

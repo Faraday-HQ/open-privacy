@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/template.njk",
+  "permalink": "/templates/{{ page.fileSlug }}/",
+  "schemaType": "article"
+}

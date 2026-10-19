@@ -1,0 +1,18 @@
+---
+schemaType: collection
+layout: layouts/base.njk
+title: Blog
+description: Plain explanations of what's changing in New Zealand privacy and online safety, and what to do about it.
+permalink: /blog/
+---
+{%- set headFacts -%}<div><dt>Posts</dt><dd>{{ collections.posts | length }}</dd></div><div><dt>Subscribe</dt><dd><a href="/feed.xml">Feed reader (Atom)</a></dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+<section class="band" aria-labelledby="posts-title">
+  <h2 class="visually-hidden" id="posts-title">All posts</h2>
+  <ul class="rows meta-first">
+  {% for post in collections.posts %}
+    <li><a class="row" href="{{ post.url }}"><time class="row-meta" datetime="{{ post.date | isoDate }}">{{ post.date | nzDate }}</time><div><span class="row-title">{{ post.data.title }}</span><p class="row-desc">{{ post.data.description }}</p></div></a></li>
+  {% endfor %}
+  </ul>
+  <p class="small edit-line">We don't run a mailing list, because we'd rather not hold your email address. Use the <a href="/feed.xml">feed</a> instead.</p>
+</section>

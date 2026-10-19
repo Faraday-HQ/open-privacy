@@ -1,0 +1,39 @@
+---
+permalink: /robots.txt
+eleventyExcludeFromCollections: true
+---
+# Faraday's content is CC BY 4.0 and meant to be found, quoted and reused.
+# We allow search engines and AI assistants, including their training crawlers,
+# so that people asking an AI about New Zealand privacy get accurate answers.
+# Policy decided in GOVERNANCE.md. Change it there first.
+
+User-agent: *
+Allow: /
+
+# Search and AI search indexing
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Applebot
+User-agent: DuckDuckBot
+Allow: /
+
+# Fetches made on behalf of a person using an AI assistant
+User-agent: ChatGPT-User
+User-agent: Claude-User
+User-agent: Perplexity-User
+Allow: /
+
+# AI model training (allowed deliberately: accurate NZ privacy information
+# in models helps the people who ask them)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml

@@ -1,0 +1,36 @@
+---
+outcome: "15 minutes. Ranks what to fix first."
+layout: layouts/tool.njk
+title: Privacy self-check for organisations
+description: Rate your organisation against the ten pou of the Privacy Commissioner's Poupou Matatapu guidance and get a prioritised list of what to fix first.
+permalink: /tools/privacy-self-check/
+script: tools/privacy-self-check.js
+storesLocally: true
+order: 6
+sources: [opc-poupou, pmaf]
+---
+<div class="prose">
+  <p>Consultancies sell this as a maturity assessment. It works the same way, with honest answers to plain questions mapped to the framework the regulator uses. It takes 15 minutes. Do it with one other person so you can argue about the answers, because the argument is where you learn what's really happening.</p>
+  <p>Government agencies have their own <a href="https://www.digital.govt.nz/standards-and-guidance/privacy-security-and-risk/privacy/privacy-maturity-assessment-framework-pmaf-and-self-assessments/learn-about-pmaf-2/what-pmaf-is" class="ext" rel="noopener noreferrer">Privacy Maturity Assessment Framework</a>. Use that if you report to the Government Chief Privacy Officer.</p>
+</div>
+
+<form id="maturity-form">
+{% for p in maturity.pou %}
+  <fieldset>
+    <legend>{{ loop.index }}. {{ p.title }}</legend>
+    {% for s in p.statements %}
+    {% set sIndex = loop.index0 %}
+    <p class="statement">{{ s }}</p>
+    <div class="scale" role="radiogroup" aria-label="{{ s }}">
+      {% for opt in maturity.scale %}
+      <label class="choice"><input type="radio" name="{{ p.id }}-{{ sIndex }}" value="{{ opt.value }}"> {{ opt.label }}</label>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </fieldset>
+{% endfor %}
+  <button class="btn" type="submit">See my results</button>
+  <button class="btn secondary" type="button" id="maturity-reset">Clear answers</button>
+</form>
+
+<div class="output" id="maturity-output" hidden aria-live="polite"></div>

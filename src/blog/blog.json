@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/post.njk",
+  "permalink": "/blog/{{ page.fileSlug }}/",
+  "author": "Faraday",
+  "schemaType": "article"
+}

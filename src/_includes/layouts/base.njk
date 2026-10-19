@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="{{ site.lang }}" data-site-url="{{ site.url }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/assets/js/site.js"></script>
+  {%- if page.url == "/" %}
+  <title>Faraday: free privacy and online safety help for New Zealand</title>
+  {%- else %}
+  <title>{{ seoTitle or title }} | Faraday</title>
+  {%- endif %}
+  <meta name="description" content="{{ metaDescription or description or site.description }}">
+  <meta name="robots" content="{% if noindex %}noindex, follow{% else %}index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1{% endif %}">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="{{ site.themeColorDark }}">{# lint-ignore: HTML attribute name #}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="en-NZ" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url }}">
+  <link rel="preload" href="/assets/fonts/geist-mono-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/syne-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="alternate" type="application/atom+xml" title="Faraday blog" href="/feed.xml">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  {%- if site.googleVerification %}
+  <meta name="google-site-verification" content="{{ site.googleVerification }}">{% endif %}
+  {%- if site.bingVerification %}
+  <meta name="msvalidate.01" content="{{ site.bingVerification }}">{% endif %}
+  <meta property="og:site_name" content="Faraday">
+  <meta property="og:locale" content="en_NZ">
+  <meta property="og:title" content="{{ title or 'Free privacy and online safety help for New Zealand' }}">
+  <meta property="og:description" content="{{ metaDescription or description or site.description }}">
+  <meta property="og:type" content="{% if schemaType == 'article' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}/og/{{ page.url | ogSlug }}.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ title or 'Faraday' }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {%- if schemaType == 'article' %}
+  <meta property="article:published_time" content="{{ (published or page.date) | isoDateTime }}">
+  <meta property="article:modified_time" content="{{ (checked or page.date) | isoDateTime }}">
+  {%- endif %}
+  {% include "partials/jsonld.njk" %}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  {% if quickExit %}
+  <a class="quick-exit" href="https://www.metservice.com/" data-quick-exit>Leave this site quickly</a>
+  {% endif %}
+  <header class="site-header">
+    <div class="frame header-inner">
+      <a class="wordmark" href="/" aria-label="Faraday home">
+        <span class="wordmark-name">Faraday</span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul>
+          {% set navItems = [
+            ["/guides/people/", "For people"],
+            ["/guides/organisations/", "For organisations"],
+            ["/answers/", "Answers"],
+            ["/tools/", "Tools"],
+            ["/templates/", "Templates"],
+            ["/blog/", "Blog"],
+            ["/about/", "About"]
+          ] %}
+          {% for item in navItems %}
+          <li><a href="{{ item[0] }}"{% if page.url.startsWith(item[0]) %} aria-current="page"{% endif %}>{{ item[1] }}</a></li>
+          {% endfor %}
+        </ul>
+        <div class="nav-extra">
+          <span>Free. No sign-up, no tracking.</span>
+          <button class="switch-btn" type="button" data-theme-toggle aria-pressed="false">Light mode <span class="track" aria-hidden="true"></span></button>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a class="help-link" href="/help/" aria-label="Get help now"{% if page.url == "/help/" %} aria-current="page"{% endif %}><span class="dot" aria-hidden="true"></span><span class="t-long">Get help now</span><span class="t-mid" aria-hidden="true">Get help</span><span class="t-short" aria-hidden="true">Help</span></a>
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Light mode" title="Light mode">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+        </button>
+        <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav"><span class="menu-label" data-menu-label>Menu</span><span class="bars" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="frame">
+      {{ content | safe }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="frame">
+      <div class="band footer-grid">
+        <div class="footer-about">
+          <p>Faraday, {{ site.tagline }}. Free privacy, online safety and data governance help for Aotearoa. Take it, adapt it, use it. If you need hands-on advice, <a href="/about/#contact">get in touch</a>.</p>
+          <p class="small">General information, not legal advice. If you are in danger now, call 111.</p>
+        </div>
+        <div>
+          <h2>Get help</h2>
+          <ul>
+            <li><a href="/help/">Get help now</a></li>
+            <li><a href="/guides/people/">For people</a></li>
+            <li><a href="/guides/organisations/">For organisations</a></li>
+            <li><a href="/scams/">Current scams</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Reference</h2>
+          <ul>
+            <li><a href="/answers/">Answers</a></li>
+            <li><a href="/tools/">Tools</a></li>
+            <li><a href="/templates/">Templates</a></li>
+            <li><a href="/glossary/">Glossary</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>The project</h2>
+          <ul>
+            <li><a href="/about/">About Faraday</a></li>
+            <li><a href="/open/">Free versus paid</a></li>
+            <li><a href="/sources/">Sources and checks</a></li>
+            <li><a href="/contribute/">Contribute</a></li>
+            <li><a href="{{ site.repo }}">Source code</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Our promises</h2>
+          <ul>
+            <li><a href="/privacy/">No tracking, no cookies</a></li>
+            <li><a href="/accessibility/">Accessibility</a></li>
+            <li><a href="mailto:{{ site.email }}">Email us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>Content {{ site.contentLicence }}. Code {{ site.codeLicence }}.</p>
+        <p>Last reviewed <time datetime="{{ site.lastReviewed }}">{{ site.lastReviewed | nzDate }}</time></p>
+      </div>
+    </div>
+  </footer>
+  {% if quickExit %}<script src="/assets/js/quick-exit.js" defer></script>{% endif %}
+  {% if script %}<script src="/assets/js/{{ script }}" type="module"></script>{% endif %}
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% if sources and sources.length %}
+<section class="doc-section sources" aria-labelledby="sources-heading">
+  <h2 id="sources-heading">Sources</h2>
+  <ol class="source-list">
+  {% for s in sources | sourcesFor(sourcesRegistry) %}
+    <li><span><a href="{{ s.url }}" rel="noopener noreferrer">{{ s.title }}</a><span class="src-meta">{{ s.publisher }}. Checked {{ s.checked | nzDate }}.</span></span></li>
+  {% endfor %}
+  </ol>
+</section>
+{% endif %}
+<p class="edit-line">Something wrong or out of date? <a href="{{ site.repo }}/issues/new?title={{ ('Correction: ' + title) | urlencode }}">Tell us</a> or <a href="{{ site.repo }}/edit/{{ site.repoBranch }}/{{ page.inputPath | replace('./', '') }}">edit this page on GitHub</a>. General information, not legal advice.</p>

@@ -1,0 +1,23 @@
+---
+permalink: /llms-full.txt
+eleventyExcludeFromCollections: true
+---
+# Faraday: full text
+
+Source: {{ site.url }}. Licence: CC BY 4.0 (credit "Faraday, {{ site.url | replace("https://", "") }}"). General information about New Zealand law and practice, not legal advice. Each section shows the page URL and the date its claims were last checked against primary sources.
+
+{% for group in [collections.answers, collections.scams, collections.people, collections.organisations] %}
+{%- for p in group %}
+---
+
+# {{ p.data.title | safe }}
+
+URL: {{ site.url }}{{ p.url }}
+Last checked: {{ (p.data.checked or p.date) | isoDate }}
+
+{{ p.data.description | safe }}
+
+{{ p.rawInput | cleanMd(site) | safe }}
+
+{% endfor -%}
+{% endfor %}

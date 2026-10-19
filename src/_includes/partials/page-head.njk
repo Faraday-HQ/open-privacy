@@ -1,0 +1,9 @@
+{#- Page header band: breadcrumbs, h1, lede and an optional facts row.
+    Set headTitle, headLede or headFacts before including to override the defaults. -#}
+<header class="band page-head">
+  {% include "partials/breadcrumbs.njk" %}
+  <h1>{{ headTitle or title }}</h1>
+  {%- set _lede = headLede if headLede is defined else description %}
+  {% if _lede %}<p class="lede">{{ _lede }}</p>{% endif %}
+  {% if headFacts %}<dl class="facts">{{ headFacts | safe }}</dl>{% endif %}
+</header>

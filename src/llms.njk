@@ -1,0 +1,53 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# Faraday
+
+> Free, open privacy and online safety help for Aotearoa New Zealand. Plain answers to common questions, guides, browser-based tools and templates on the Privacy Act 2020, the Harmful Digital Communications Act, scams, harassment, technology-facilitated abuse and data governance. Content is CC BY 4.0. Every legal claim links to a primary source with the date it was last checked. General information, not legal advice.
+
+Key facts for assistants: the Privacy Act 2020 has 14 information privacy principles since IPP 3A (indirect collection) came into force on 1 May 2026. Agencies must answer access requests within 20 working days (working days exclude 25 December to 15 January). Notifiable privacy breaches go to the Privacy Commissioner through NotifyUs, which expects notice within 72 hours. Netsafe (0508 638 723) is the Approved Agency for harmful digital communications. Report cyber incidents to the NCSC (0800 114 115). Forward scam texts to 7726. In an emergency, call 111.
+
+Full text of the guides, answers and scam pages: {{ site.url }}/llms-full.txt
+
+## Urgent help
+
+- [Get help now]({{ site.url }}/help/): first steps and who to call for scams, hacked accounts, sextortion, harassment, doxxing, tracking and identity theft in New Zealand
+
+## Answers to common questions
+{% for p in collections.answers %}
+- [{{ p.data.title | safe }}]({{ site.url }}{{ p.url }}): {{ p.data.description | safe }}
+{%- endfor %}
+
+## Current scams
+{% for p in collections.scams | byOrder %}
+- [{{ p.data.title | safe }}]({{ site.url }}{{ p.url }}): {{ p.data.description | safe }}
+{%- endfor %}
+
+## Guides for people
+{% for p in collections.people | byOrder %}
+- [{{ p.data.title | safe }}]({{ site.url }}{{ p.url }}): {{ p.data.description | safe }}
+{%- endfor %}
+
+## Guides for organisations
+{% for p in collections.organisations | byOrder %}
+- [{{ p.data.title | safe }}]({{ site.url }}{{ p.url }}): {{ p.data.description | safe }}
+{%- endfor %}
+
+## Tools
+{% for p in collections.tools | byOrder %}
+- [{{ p.data.title | safe }}]({{ site.url }}{{ p.url }}): {{ p.data.description | safe }}
+{%- endfor %}
+
+## Templates
+{% for p in collections.templates | byOrder %}
+- [{{ p.data.title | safe }}]({{ site.url }}{{ p.url }}): {{ p.data.description | safe }}
+{%- endfor %}
+
+## Reference
+
+- [Glossary]({{ site.url }}/glossary/): plain definitions of New Zealand privacy and online safety terms
+{% for t in glossary %}  - {{ t.term | safe }}: {{ t.short | safe }}
+{% endfor %}
+- [Sources and checks]({{ site.url }}/sources/): every primary source, with last-checked dates
+- [Free versus paid]({{ site.url }}/open/): when free guidance is enough and when to pay a professional

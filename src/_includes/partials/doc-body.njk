@@ -1,0 +1,16 @@
+{#- Article body band: the reading column, with "On this page" beside it on wide screens.
+    Expects mainHtml (captured) and content. -#}
+{%- set _toc = (tocSource or content) | toc %}
+<div class="band doc-body">
+  <div class="doc-grid">
+    <div class="doc-main">{{ mainHtml | safe }}</div>
+    {%- if _toc.length >= 3 and showToc !== false %}
+    <aside class="doc-aside" aria-label="On this page">
+      <details class="toc">
+        <summary>On this page</summary>
+        <ol>{% for h in _toc %}<li><a href="#{{ h.id }}">{{ h.text }}</a></li>{% endfor %}</ol>
+      </details>
+    </aside>
+    {%- endif %}
+  </div>
+</div>

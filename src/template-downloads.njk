@@ -1,0 +1,14 @@
+---
+pagination:
+  data: collections.templates
+  size: 1
+  alias: tpl
+permalink: "/downloads/{{ tpl.fileSlug }}.md"
+eleventyExcludeFromCollections: true
+eleventyAllowMissingExtension: true
+---
+{%- set body = tpl.rawInput.split("<!-- template -->") -%}
+{{ (body[1] if body.length > 1 else body[0]) | trim | replace('{{ site.url | replace("https://", "") }}', site.url | replace("https://", "")) | safe }}
+
+---
+From Faraday, {{ site.url | replace("https://", "") }}{{ tpl.url }} (CC BY 4.0). Checked against New Zealand sources on {{ tpl.data.checked | nzDate }}. General information, not legal advice.

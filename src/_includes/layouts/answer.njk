@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+{%- set headLede = "" -%}
+{%- set headFacts -%}
+{% if checked %}<div><dt>Checked against sources</dt><dd><time datetime="{{ checked | isoDate }}">{{ checked | nzDate }}</time></dd></div>{% endif %}
+{% include "partials/source-fact.njk" %}
+<div><dt>Applies to</dt><dd>New Zealand</dd></div>
+{%- endset -%}
+{%- set rel = collections.all | related(page.url, cluster) -%}
+{%- set mainHtml -%}
+{% if answer %}
+<section class="answer" aria-label="Short answer">
+  <div class="panel-bar"><span class="lead">Short answer</span><span class="aside">General information, not legal advice</span></div>
+  <p>{{ answer }}</p>
+</section>
+{% endif %}
+<div class="prose">{{ content | safe }}</div>
+{% if rel.length or relatedLinks %}
+<section class="doc-section related" aria-labelledby="related-heading">
+  <h2 id="related-heading">Related</h2>
+  <ul class="rows">
+    {% for l in relatedLinks %}<li><a class="row" href="{{ l.url }}"><span class="row-title">{{ l.text }}</span></a></li>{% endfor %}
+    {% for r in rel %}<li><a class="row" href="{{ r.url }}"><span class="row-title">{{ r.data.title }}</span></a></li>{% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% include "partials/sources.njk" %}
+{%- endset -%}
+<article>
+  {% include "partials/page-head.njk" %}
+  {% include "partials/doc-body.njk" %}
+</article>

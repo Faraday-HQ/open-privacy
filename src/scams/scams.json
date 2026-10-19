@@ -1,0 +1,6 @@
+{
+  "layout": "layouts/answer.njk",
+  "permalink": "/scams/{{ page.fileSlug }}/",
+  "schemaType": "article",
+  "cluster": "scams"
+}

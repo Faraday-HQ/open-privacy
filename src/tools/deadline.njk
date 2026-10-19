@@ -1,0 +1,45 @@
+---
+outcome: "1 minute. Gives the due date and every holiday it skips."
+layout: layouts/tool.njk
+title: Privacy Act deadline calculator
+description: Work out the last day an agency has to respond to a request for your personal information, using the statutory definition of a working day.
+permalink: /tools/deadline/
+script: tools/deadline.js
+order: 1
+audience: Anyone making or answering a Privacy Act request
+sources: [pa-s7, pa-s44, matariki-dates]
+---
+<form id="deadline-form" novalidate>
+  <fieldset>
+    <legend>The request</legend>
+    <label for="received">Date the agency received the request
+      <span class="hint">For email, this is usually the day it arrived. If it arrived after hours, some agencies treat the next working day as the day of receipt; to be safe, use the day it arrived.</span>
+    </label>
+    <input type="date" id="received" name="received" required>
+
+    <label for="days">Time limit</label>
+    <select id="days" name="days">
+      <option value="20">20 working days: decision on an access or correction request (s 44)</option>
+      <option value="10">10 working days: transferring a request to another agency</option>
+      <option value="custom">Another number of working days</option>
+    </select>
+    <div id="custom-wrap" hidden>
+      <label for="custom">Number of working days</label>
+      <input type="text" inputmode="numeric" id="custom" name="custom" value="20">
+    </div>
+  </fieldset>
+  <button class="btn" type="submit">Calculate deadline</button>
+</form>
+
+<div class="output" id="deadline-output" hidden aria-live="polite"></div>
+
+<div class="prose">
+  <h2>How this is worked out</h2>
+  <p>Section 7 of the Privacy Act 2020 defines a working day. It excludes weekends; Waitangi Day; Good Friday; Easter Monday; Anzac Day; the Sovereign's birthday; Matariki; Labour Day; the following Monday when Waitangi Day or Anzac Day falls on a weekend; and every day from 25 December to 15 January.</p>
+  <p>Regional anniversary days are not excluded, so Auckland Anniversary Day still counts as a working day for this purpose.</p>
+  <p>The count starts the day after the agency receives the request. The agency must respond "as soon as reasonably practicable", and no later than the deadline. The deadline is the outer limit.</p>
+  <h2>What the response must include</h2>
+  <p>By the deadline the agency must tell you whether it holds information about you and whether it will give you access. It can extend the time limit in some circumstances, but it has to tell you within the original period, say how long the extension is and why, and tell you that you can complain to the Privacy Commissioner about it.</p>
+  <p>If the deadline passes with no response, treat the request as refused. You can complain to the Privacy Commissioner. Our <a href="/tools/request-letter/">request letter builder</a> writes the follow-up for you.</p>
+  <p>The calculator's logic is open source and tested against hand-worked examples. See <code>tests/nzdates.test.js</code> in the <a href="{{ site.repo }}">repository</a>.</p>
+</div>

@@ -1,0 +1,22 @@
+---
+schemaType: collection
+layout: layouts/base.njk
+title: Templates
+description: Policies, plans, registers and worksheets written for New Zealand law. Download, adapt, and use them. No attribution needed inside your own documents.
+permalink: /templates/
+---
+{%- set headFacts -%}<div><dt>Templates</dt><dd>{{ collections.templates | length }}</dd></div><div><dt>Licence</dt><dd>CC BY 4.0, no attribution needed inside your own documents</dd></div><div><dt>Formats</dt><dd>Markdown, plus CSV for registers</dd></div>{%- endset -%}
+{% include "partials/page-head.njk" %}
+<section class="band" aria-labelledby="tpl-list">
+  <div class="split">
+    <div class="split-head">
+      <h2 id="tpl-list">Adapt, don't copy</h2>
+      <p>Each template explains why each section exists. If your organisation handles sensitive information at scale, have someone experienced review what you end up with.</p>
+    </div>
+    <ul class="rows">
+    {% for t in collections.templates | byOrder %}
+      <li><a class="row" href="{{ t.url }}"><span class="row-title">{{ t.data.title }}</span><span class="row-desc">{{ t.data.description }}</span></a></li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
