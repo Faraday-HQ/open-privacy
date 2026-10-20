@@ -58,7 +58,7 @@ Rewrite your privacy statement so it matches what you found in weeks 3 to 5. Use
 
 ## Week 10: be ready for a breach
 
-Adopt our [breach response plan](/templates/breach-response-plan/). Put names next to the roles. Set up a [breach register](/downloads/breach-register.csv). Then run a 30-minute tabletop exercise with a scenario like this one. "Someone emailed the client list to the wrong person at 4.45pm on a Friday. What happens next?" You'll find the gaps in ten minutes.
+Adopt our [breach response plan](/templates/breach-response-plan/). Put names next to the roles. Set up a [breach register](/downloads/breach-register.csv). Then test it by talking through a scenario with the people named in it, such as "Someone emailed the client list to the wrong person at 4.45pm on a Friday. What happens next?" You'll find the gaps in ten minutes.
 
 *Pou: Breach management.*
 
@@ -68,9 +68,9 @@ Adopt our [access request procedure](/templates/access-request-procedure/) and s
 
 *Pou: Responding to requests and complaints well.*
 
-## Week 12: train people
+## Week 12: make sure people know the basics
 
-Run our [30-minute staff induction](/templates/staff-induction/) for everyone. Focus on recognising and reporting a breach quickly, and on email care. Add it to onboarding.
+Use our [staff privacy essentials checklist](/templates/staff-privacy-essentials/) so everyone knows the four rules, how to report a breach quickly, and what to do with requests. For training, use the Commissioner's free e-learning or your usual training provider. Add the checklist to onboarding.
 
 *Pou: Building capability and awareness.*
 

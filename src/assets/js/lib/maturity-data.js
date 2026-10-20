@@ -53,11 +53,11 @@ export const POU = [
   {
     id: "capability", title: "Building capability and awareness", opc: `${OPC}building-capability-and-awareness/`,
     statements: [
-      "Every staff member gets a privacy induction and a yearly refresher.",
+      "Every staff member learns the privacy essentials when they start, with a yearly reminder.",
       "Staff know what a breach looks like and how to report one quickly.",
       "Teams handling sensitive information get training specific to their work.",
     ],
-    actions: [["30-minute staff privacy induction", "/templates/staff-induction/"]],
+    actions: [["Staff privacy essentials checklist", "/templates/staff-privacy-essentials/"]],
   },
   {
     id: "breach", title: "Breach management", opc: `${OPC}breach-management/`,

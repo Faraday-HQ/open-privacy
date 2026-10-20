@@ -42,7 +42,7 @@ The privacy officer helps [organisation] meet its obligations under the Privacy 
 - Run the access and correction request process and keep the request log.
 - Review privacy impact assessments for new projects, suppliers and AI tools.
 - Maintain the privacy statement and collection notices.
-- Arrange privacy induction and refresher training.
+- Make sure staff know the privacy essentials when they start and each year, and arrange training where it's needed.
 - Report to leadership at least twice a year.
 - Keep up with changes in privacy law and guidance.
 

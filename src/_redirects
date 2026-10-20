@@ -7,3 +7,7 @@ https://www.faradayhq.com/*    https://faraday.co.nz/:splat    301!
 /audit         /tools/exposure-audit/          301
 /deadline      /tools/deadline/                301
 /breach        /tools/breach/                  301
+
+# Renamed pages
+/templates/staff-induction/       /templates/staff-privacy-essentials/       301
+/downloads/staff-induction.md     /downloads/staff-privacy-essentials.md     301

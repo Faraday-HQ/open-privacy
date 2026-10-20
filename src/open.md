@@ -21,7 +21,7 @@ We reviewed the privacy services advertised by New Zealand consultancies, accoun
 | Breach response planning | [Breach response plan and register](/templates/breach-response-plan/), [breach assessment record](/tools/breach/) | You want a facilitated exercise with experienced incident responders |
 | Breach response | [Breach response guide](/guides/organisations/breach-response/), NCSC on 0800 114 115 | Always, for a serious cyber attack: forensics, legal advice, communications |
 | Supplier or third-party risk review | [Supplier questionnaire](/templates/vendor-questionnaire/) | The supplier is critical and you need technical security testing |
-| Staff training | [30-minute induction](/templates/staff-induction/), the Commissioner's free [e-learning](https://www.privacy.org.nz/resources-and-learning/online-privacy-training-free/) | You need role-specific training for high-risk teams |
+| Staff training | [Staff privacy essentials checklist](/templates/staff-privacy-essentials/), the Commissioner's free [e-learning](https://www.privacy.org.nz/resources-and-learning/online-privacy-training-free/) | You need role-specific training for high-risk teams |
 | Outsourced privacy officer | [Privacy officer role description](/templates/privacy-officer-role/), and all the tools on this site | Nobody inside has the time, or you need senior experience during a crisis |
 | Access request handling | [Procedure and log](/templates/access-request-procedure/), [deadline calculator](/tools/deadline/) | A request is part of a legal dispute |
 | AI governance | [AI at work guide](/guides/organisations/ai-at-work/), [AI use policy](/templates/ai-use-policy/) | You're building AI products or using AI to make decisions about people |

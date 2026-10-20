@@ -11,7 +11,7 @@ sources: [pa-s112, pa-s113, pa-s114, pa-s115, pa-s116, pa-s118, opc-breaches, op
 
 ## How to use this
 
-Fill in the names and phone numbers now, while nothing is on fire. Print a copy, because in a cyber attack your systems may be down. Practise once a year with a 30-minute scenario.
+Fill in the names and phone numbers now, while nothing is on fire. Print a copy, because in a cyber attack your systems may be down. Test it once a year by talking through a scenario (section 7).
 
 The breach register (CSV) opens in Excel, Google Sheets or Numbers. Record every incident and near miss, including the ones you decide aren't notifiable, with your reasons. That record is what the Privacy Commissioner will ask for.
 
@@ -102,9 +102,9 @@ We don't say "there is no evidence of misuse" unless we've looked for it, and we
 - [ ] Update the breach register with the outcome.
 - [ ] Report to leadership.
 
-## 7. Practising
+## 7. Testing the plan
 
-Once a year, run a 30-minute exercise using one of these:
+Once a year, check the plan still works by talking through one of these scenarios with the people named in it:
 
 - A staff member emails a spreadsheet of client details to the wrong external address at 4.45pm on a Friday.
 - Our email provider tells us an attacker accessed a staff mailbox for three weeks.
