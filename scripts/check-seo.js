@@ -55,7 +55,7 @@ for (const file of pages) {
   }
 
   if (process.env.SKIP_OG !== "1") {
-    const og = (/<meta property="og:image" content="https:\/\/[^/]+(\/og\/[^"]+)"/.exec(html) || [])[1];
+    const og = (/<meta property="og:image" content="https:\/\/[^/]+(\/og\/[^"?]+)(?:\?[^"]*)?"/.exec(html) || [])[1];
     if (!og || !existsSync(join(ROOT, og))) err(rel, `missing social card ${og || ""}`);
   }
 }
