@@ -64,9 +64,7 @@ function card(title, section, urgent) {
           h("div", {}, SITE_HOST),
           h("div", { marginTop: 6 }, "Free privacy help for Aotearoa"),
         ]),
-        h("div", { display: "flex", alignItems: "center", justifyContent: "center", width: 88, height: 88, border: `1.5px solid ${C.ink}`, backgroundImage: MESH }, [
-          h("div", { width: 16, height: 16, backgroundColor: C.accent }, ""),
-        ]),
+        
       ]),
     ]),
   ]);
