@@ -33,7 +33,7 @@
   <meta property="og:description" content="{{ metaDescription or description or site.description }}">
   <meta property="og:type" content="{% if schemaType == 'article' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ site.url }}/og/{{ page.url | ogSlug }}.png">
+  <meta property="og:image" content="{{ site.url }}/og/{{ page.url | ogSlug }}.png?v={{ site.ogVersion }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{{ title or 'Faraday' }}">
