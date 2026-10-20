@@ -18,7 +18,7 @@ Some of that work needs years of experience. Most of the rest needs someone who 
 | Privacy impact assessment | Our [PIA template](/templates/privacy-impact-assessment/), with a threshold check and principle-by-principle assessment |
 | Breach response planning | Our [breach response plan](/templates/breach-response-plan/), register and [assessment record](/tools/breach/) |
 | Supplier privacy review | Our [supplier questionnaire](/templates/vendor-questionnaire/) and contract checklist |
-| Staff training | Our [30-minute induction](/templates/staff-induction/), and the Commissioner's free e-learning |
+| Staff training | Our [staff privacy essentials checklist](/templates/staff-privacy-essentials/), and the Commissioner's free e-learning |
 | Data mapping | Our [personal information inventory](/templates/data-inventory/) and interview guide |
 | Personal exposure review | Our [personal exposure audit](/tools/exposure-audit/) |
 

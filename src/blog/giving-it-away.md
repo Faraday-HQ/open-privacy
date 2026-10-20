@@ -17,7 +17,7 @@ Most of that work follows a method, and a method can be written down. So we've w
 - **Tools** that run in your browser and send nothing anywhere, including a statutory deadline calculator, request letters, a breach assessment record, an indirect collection check, a personal exposure audit and a privacy self-check.
 - **Templates**: privacy statements, collection notices, a privacy impact assessment, a breach response plan and register, an inventory, a retention schedule, policies, and a digital safety plan.
 
-Everything is licensed for reuse. The content is CC BY 4.0 and the code is MIT. Put our breach plan in your staff handbook. Run the exposure audit in a workshop. Fork the whole site.
+Everything is licensed for reuse. The content is CC BY 4.0 and the code is MIT. Put our breach plan in your staff handbook. Fork the whole site.
 
 ## Why give it away
 
