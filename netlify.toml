@@ -27,7 +27,7 @@
     X-Frame-Options = "DENY"
     Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()"
     Cross-Origin-Opener-Policy = "same-origin"
-    Strict-Transport-Security = "max-age=3600; includeSubDomains; preload"
+    Strict-Transport-Security = "max-age=604800; includeSubDomains; preload"
 
 [[headers]]
   for = "/assets/fonts/*"
@@ -44,7 +44,7 @@
 [[headers]]
   for = "/og/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=3600"
 
 [[headers]]
   for = "/llms.txt"
