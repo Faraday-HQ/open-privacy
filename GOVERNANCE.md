@@ -17,9 +17,8 @@ These are the rules for what Faraday publishes and how it stays accurate. They a
 | Source registry staleness | Automatic, every build | CI |
 | Link check | Weekly | CI |
 | `to-verify` sources | Before each release | Maintainer |
-| Organisation guides | Every 6 months, and on any law change | Maintainer plus a privacy lawyer where possible |
-| Help page and safety guides | Every 6 months | Maintainer |
-| Phone numbers and contact details | Every 3 months | Maintainer |
+| Organisation guides | Before each release | Maintainer plus a privacy lawyer where possible |
+| Help page and safety guides | Before each release | Maintainer |
 | Matariki table in `nzdates.js` | Before it runs out (currently loaded to 2032) | Maintainer |
 
 **Law changes.** When a relevant law, code or regulation changes: update affected pages, update the home page timeline, add a changelog entry, and consider a blog post explaining the change.
