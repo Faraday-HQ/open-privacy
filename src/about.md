@@ -27,4 +27,6 @@ We've published what we know as an open commons for Aotearoa, with guides, tools
 
 ## Contact {:#contact}
 
-If you need advice on your situation, email [{{ site.email }}](mailto:{{ site.email }}). We read everything, but we're not a crisis service. If something is happening now, go to [Get help now](/help/).
+Faraday isn't giving advice or updating the site at the moment. Each page shows the date its sources were last checked, so check anything important against the source before you rely on it. You can still email [{{ site.email }}](mailto:{{ site.email }}), and we'll reply when we can.
+
+For help with your own situation, contact the [Privacy Commissioner](https://www.privacy.org.nz/), [Netsafe](https://netsafe.org.nz/) or your local [Community Law centre](https://communitylaw.org.nz/). We're not a crisis service. If something is happening now, go to [Get help now](/help/).
